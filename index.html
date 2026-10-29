@@ -3279,6 +3279,253 @@ body{padding:0!important;margin:0;background:#FFFFFF}
 .rl::after{z-index:1;height:62%;background:linear-gradient(transparent,#050B1Af0)}
 .rl::before{content:"";position:absolute;inset:0 0 auto;height:22%;z-index:1;background:linear-gradient(#050B1A99,transparent)}
 .rl-av{display:none}
+
+/* ===== round 2 of notes (29.10.2026 night) ===== */
+/* video: title on top in one line, the video under it, the three moments in a row */
+@container pg (min-width:861px){
+  .rC .vid2 .vtitle{display:block!important;font-size:3.3cqw!important;white-space:nowrap;margin:0 0 2.6cqw!important;text-align:center}
+  .rC .vid2 .vtitle .th{display:inline!important;font-weight:200}
+  .rC .vid2 .vgrid{grid-template-columns:1fr!important;gap:3cqw!important;justify-items:center}
+  .rC .vid2 .vgrid .cover{position:relative!important;top:auto!important;width:64cqw;max-width:100%}
+  .rC .vid2 .vside{width:100%;align-items:center!important;gap:2.6cqw!important}
+  .rC .vid2 .moments{display:grid!important;grid-template-columns:repeat(3,1fr);gap:1.8cqw;width:100%}
+  .rC .vid2 .moments .thread,.rC .vid2 .mo .node{display:none!important}
+  .rC .vid2 .mo{padding:1.8cqw!important;border-radius:1.8cqw;background:linear-gradient(160deg,#FFFFFF14,#FFFFFF08);box-shadow:0 0 0 1px #FFFFFF1f inset,0 2cqw 4cqw -2.4cqw #000000b3;border:0!important;text-align:right}
+  .rC .vid2 .mo h3{font-size:max(1.6cqw,19px)!important}
+  .rC .vid2 .mo p{font-size:max(1.15cqw,15.5px)!important}
+  .rC .vid2 .vside .cta{margin:0 auto!important;align-self:center!important}
+}
+/* stories: a real-looking logo, mark plus the business name */
+.pl-brand{display:inline-flex;align-items:center;gap:.7cqw;padding:.55cqw 1.1cqw .55cqw .6cqw;border-radius:1.2cqw;background:#FFFFFF;box-shadow:0 .8cqw 1.8cqw -1cqw #0B1F4D80;flex:none}
+.pl-brand svg{width:2.8cqw;height:2.8cqw;display:block}
+.pl-bn{font-size:max(1.2cqw,15px);font-weight:900;letter-spacing:-.01em;white-space:nowrap}
+.pl-who{flex-wrap:wrap}
+.pl-who>span:not(.pl-brand):not(.pl-n){order:2}
+/* pain: closer to the form, bigger and centred on the phone */
+.pn{padding-top:3.6cqw}
+.pn .nx-h{font-size:3.3cqw}
+.pn-h3{margin:0;display:flex;flex-direction:column;gap:.4cqw;font-weight:400;line-height:1.2}
+.pn-h3 .a{font-size:2cqw;font-weight:400;color:#0B1F4D}
+.pn-h3 .b{font-size:2.5cqw;font-weight:900;background:linear-gradient(100deg,#0B1F4D,#1A5CFF 60%,#3D8BFF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pn-p8 p{margin-top:1cqw!important;font-size:max(1.35cqw,17px)!important}
+.pn-svg.pn-svgm{display:none}
+/* the client chat as real WhatsApp */
+.pn-chat{background:#EFEAE2;background-image:radial-gradient(#00000008 1px,transparent 1.4px),radial-gradient(#00000006 1px,transparent 1.4px);background-size:1.4cqw 1.4cqw,2.2cqw 2.2cqw;background-position:0 0,.7cqw .9cqw}
+.pn-ch{display:none}
+.wa2-h{display:flex;align-items:center;gap:.7cqw;padding:.8cqw 1.1cqw;background:#F6F6F6;border-bottom:1px solid #0000000f;color:#111B21}
+.wa2-bk{font-size:max(1.8cqw,20px);line-height:1;color:#007AFF}
+.wa2-av{width:2.6cqw;height:2.6cqw;border-radius:50%;background:linear-gradient(180deg,#C9D3DC,#A9B6C2);display:grid;place-items:center;font-weight:700;color:#fff;font-size:max(1.05cqw,14px)}
+.wa2-n{flex:1}.wa2-n b{display:block;font-size:max(1.1cqw,14.5px);font-weight:600}.wa2-st{display:block;font-size:max(.82cqw,12px);color:#25D366}
+.wa2-ic{display:flex;gap:1.2cqw}.wa2-ic i{width:1.6cqw;height:1.2cqw;border:2px solid #007AFF;border-radius:.3cqw}.wa2-ic i.c{width:1.3cqw;height:1.3cqw;border-radius:50%}
+.wa2-day{align-self:center;font-size:max(.82cqw,12px);color:#54656F;background:#FFFFFFe6;border-radius:.6cqw;padding:.2cqw .8cqw;box-shadow:0 1px 1px #0000000f}
+.pn-msgs{padding:1.2cqw 1.4cqw}
+.pn-m{position:relative;align-self:flex-start!important;max-width:78%;border-radius:0 1cqw 1cqw 1cqw!important;margin-inline-start:.6cqw}
+.pn-m::before{content:"";position:absolute;top:0;right:-.6cqw;width:.7cqw;height:.9cqw;background:inherit;clip-path:polygon(0 0,100% 0,0 100%)}
+.pn-m.me{align-self:flex-end!important;border-radius:1cqw 0 1cqw 1cqw!important;margin-inline-start:0;margin-inline-end:.6cqw}
+.pn-m.me::before{right:auto;left:-.6cqw;clip-path:polygon(0 0,100% 0,100% 100%)}
+.pn-m em i{font-style:normal;color:#53BDEB}
+.pn-m.late{box-shadow:0 1px 1px #0000001a!important}
+.pn-srch{align-self:flex-end!important;margin-inline-end:.6cqw}
+.wa2-in{display:flex;align-items:center;gap:.8cqw;padding:.7cqw 1cqw;background:#F6F6F6;border-top:1px solid #0000000f}
+.wa2-in span{flex:1;padding:.5cqw 1cqw;border-radius:99px;background:#fff;box-shadow:0 0 0 1px #0000000f;font-size:max(.95cqw,13px);color:#8696A0}
+.wa2-in i{width:2.4cqw;height:2.4cqw;border-radius:50%;background:#25D366}
+/* consequences: message times instead of numbers */
+.pn-dark .pn-n{flex:none;width:auto;min-width:5.6cqw;font-size:max(.95cqw,13px)!important;font-weight:700;color:#0B1F4D;background:#8ED3FF;border-radius:99px;padding:.2cqw .7cqw;text-align:center;align-self:center;direction:ltr}
+.pn-dark .pn-l{align-items:center}
+.pn-dark .pn-frame p{font-size:2.6cqw!important}
+/* reels: two-line title */
+.rls .nx-h .gr{display:block}
+/* how it works: real app screens in a real iPhone, no numbered boxes */
+.tlx{padding-top:4.4cqw;background:radial-gradient(40% 55% at 70% 40%,#1A5CFF8c,transparent 70%),radial-gradient(30% 40% at 10% 90%,#3D8BFF4d,transparent 70%),linear-gradient(165deg,#0F2A6B,#0B1F4D 50%,#061232)}
+.tlx .rings path{stroke:#8ED3FF}
+.tl2{display:grid;grid-template-columns:1fr 1.05fr;gap:3.6cqw;align-items:center;margin-top:2.6cqw;text-align:right}
+.tl2-steps{display:flex;flex-direction:column;gap:.6cqw}
+.tl-s{position:relative;display:block;font:inherit;text-align:right;color:#fff;background:none;border:0;padding:1.4cqw 1.6cqw;border-radius:1.6cqw;cursor:pointer;opacity:.5;transition:opacity .4s,background .4s,box-shadow .4s}
+.tlx[data-z="0"] .tl-s[data-z="0"],.tlx[data-z="1"] .tl-s[data-z="1"],.tlx[data-z="2"] .tl-s[data-z="2"]{opacity:1;background:linear-gradient(150deg,#FFFFFF1f,#FFFFFF0a);box-shadow:0 0 0 1px #8ED3FF59 inset,0 2cqw 4cqw -2.4cqw #000}
+.tl-tg{display:inline-flex;align-items:center;gap:.5cqw;font-size:max(.95cqw,13px);font-weight:700;color:#8ED3FF}
+.tl-tg i{width:.6cqw;height:.6cqw;border-radius:50%;background:#8ED3FF}
+.tlx[data-z="1"] .tl-s[data-z="1"] .tl-tg i{background:#FF3B30;animation:bl2 1s ease-in-out infinite}
+.tl-s b{display:block;margin-top:.5cqw;font-size:max(1.6cqw,19px);font-weight:900;line-height:1.25}
+.tl-tx{display:block;margin-top:.5cqw;font-size:max(1.15cqw,15.5px);line-height:1.6;color:#EAF4FF}
+.tl-s:not([data-z]) .tl-tx{display:none}
+.tl-s em{position:absolute;left:1.6cqw;right:1.6cqw;bottom:.6cqw;height:2px;border-radius:2px;background:#FFFFFF1f;overflow:hidden;opacity:0}
+.tl-s em i{display:block;height:100%;width:0;background:#8ED3FF}
+.tlx[data-z="0"] .tl-s[data-z="0"] em,.tlx[data-z="1"] .tl-s[data-z="1"] em,.tlx[data-z="2"] .tl-s[data-z="2"] em{opacity:1}
+.tl2-dev{position:relative;height:40cqw}
+.tl2-glow{position:absolute;left:18%;right:18%;top:12%;bottom:6%;border-radius:3cqw;background:radial-gradient(70% 60% at 50% 30%,#8ED3FF,transparent 70%),linear-gradient(160deg,#3D8BFF,#1A5CFF);opacity:.55;filter:blur(2px)}
+.tl2-ph{position:absolute;left:50%;top:0;height:100%;transform:translateX(-50%);aspect-ratio:1024/1536;filter:drop-shadow(0 3cqw 3cqw #00000099);z-index:1}
+.tl2-ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.tl2-scr{position:absolute;left:22.6%;top:10.4%;width:55.2%;height:78.1%;border-radius:13%/6.2%;overflow:hidden;container-type:inline-size;direction:rtl;background:#fff}
+.tl2-l{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .5s}
+.tlx[data-z="0"] .l0,.tlx[data-z="1"] .l1,.tlx[data-z="2"] .l2{opacity:1}
+.tl2-l.l1{color:#fff;background:radial-gradient(120% 60% at 30% 10%,#5A6B8C,transparent 60%),radial-gradient(100% 60% at 80% 90%,#2B3550,transparent 60%),linear-gradient(180deg,#3A4560,#1B2133)}
+.tl2-pill{position:absolute;z-index:3;right:-2%;top:22%;display:flex;align-items:center;gap:.6cqw;padding:.7cqw 1.1cqw;border-radius:99px;background:#FFFFFF;color:#1A5CFF;font-size:max(1cqw,13.5px);font-weight:700;box-shadow:0 1.6cqw 3cqw -1.4cqw #000;opacity:0;transform:translateY(.6cqw);transition:opacity .4s,transform .4s}
+.tl2-pill i{width:.7cqw;height:.7cqw;border-radius:50%;background:#1A5CFF}
+.tl2-pill .b{display:none;color:#1F8A4C}.tlx.cn .tl2-pill .a{display:none}.tlx.cn .tl2-pill .b{display:inline}.tlx.cn .tl2-pill i{background:#2BD66F}
+.tlx[data-z="0"] .tl2-pill{opacity:1;transform:none}
+.tl2-float{position:absolute;z-index:3;display:flex;flex-direction:column;gap:.6cqw;opacity:0;transition:opacity .4s}
+.tl2-float.f1{right:-6%;top:30%;width:22cqw}.tl2-float.f2{left:-6%;top:44%;width:21cqw}
+.tlx[data-z="1"] .f1,.tlx[data-z="2"] .f2{opacity:1}
+.tl2-lis{display:inline-flex;align-self:flex-start;align-items:center;gap:.5cqw;padding:.5cqw .9cqw;border-radius:99px;background:#FF3B30;color:#fff;font-size:max(.95cqw,13px);font-weight:700;box-shadow:0 1cqw 2cqw -1cqw #FF3B30}
+.tl2-lis .ch{width:1.8cqw}
+.tl2-float .tl-chip{align-self:flex-start;background:#FFFFFF;box-shadow:0 1.6cqw 3cqw -1.6cqw #000;border-radius:1.1cqw 1.1cqw 1.1cqw .3cqw}
+.tl2-float .tl-tk{opacity:0;background:#FFFFFF;border-radius:1cqw;padding:.6cqw .9cqw;box-shadow:0 1.6cqw 3cqw -1.6cqw #000;transform:translateY(.6cqw);transition:opacity .35s,transform .35s}
+.tl2-float .tl-tk.show{opacity:1;transform:none}
+.tl2-float .tl-sent{align-self:flex-start;box-shadow:0 1.6cqw 3cqw -1.6cqw #000}
+.tlx .tl-axis{margin-top:3cqw}
+.tlx .tl-scenes,.tlx .tl-steps{display:none}
+/* after the call: a to-do list, no numbers */
+.af{padding-top:4.4cqw}
+.af-g{grid-template-columns:26cqw 1fr}
+.af-tabs{gap:.4cqw;background:#FFFFFF;border-radius:1.8cqw;padding:.8cqw;box-shadow:0 0 0 1px #1A5CFF1a,0 2cqw 4cqw -2.6cqw #0B1F4D59}
+.af-tb,.af-tb.on{background:none;box-shadow:none;transform:none;color:#0B1F4D;padding:1cqw 1.1cqw;border-radius:1.2cqw}
+.af-tb.on{background:#EEF4FF}
+.af-ck{flex:none;width:1.9cqw;height:1.9cqw;border-radius:50%;box-shadow:0 0 0 2px #1A5CFF59 inset;margin-top:.15cqw;display:grid;place-items:center;transition:background .3s}
+.af-tb.on .af-ck{background:#1A5CFF;box-shadow:none}
+.af-tb.on .af-ck::after{content:"";width:.45cqw;height:.85cqw;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.af-tt b{display:block;font-size:max(1.3cqw,16.5px);font-weight:900}
+.af-tt span{display:block;max-height:0;overflow:hidden;opacity:0;margin-top:0;font-size:max(1.05cqw,14.5px);line-height:1.55;color:#4A5F8C;transition:max-height .45s,opacity .35s,margin .35s}
+.af-tb.on .af-tt span{max-height:8cqw;opacity:1;margin-top:.4cqw}
+.af-tb em{background:#1A5CFF1f}.af-tb em i{background:#1A5CFF}
+.af-app{min-height:32cqw}
+/* works where you work: centred, the summary flows into the chosen tool */
+.wh{padding-top:4.4cqw;text-align:center}
+.wh-t{max-width:66cqw;margin:0 auto}
+.wh .nx-h{text-align:center}
+.wh-t p{text-align:center}
+.wh-v{display:grid;grid-template-columns:24cqw auto 1fr;gap:2cqw;align-items:center;margin-top:3cqw;text-align:right}
+.wh-wa{transform:rotate(-1.5deg)}
+.wh-arrow{display:flex;flex-direction:column;align-items:center;gap:.6cqw;font-size:max(.95cqw,13px);font-weight:700;color:#8ED3FF}
+.wh-arrow i{position:relative;width:6cqw;height:2px;background:linear-gradient(270deg,#8ED3FF,#FFFFFF);overflow:visible}
+.wh-arrow i::after{content:"";position:absolute;left:-.2cqw;top:50%;width:.8cqw;height:.8cqw;border:solid #fff;border-width:0 0 2px 2px;transform:translateY(-50%) rotate(45deg)}
+.wh-tool{display:flex;flex-direction:column;gap:1cqw}
+.wh-dest{display:flex;gap:.6cqw;grid-template-columns:none}
+.wh-d{font:inherit;cursor:pointer;border:0;color:#fff;flex:1;justify-content:center}
+.wh-out{position:relative;height:14cqw;margin:0}
+.wh-o{display:block;padding:0;background:none;box-shadow:none}
+.wo{height:100%;display:flex;flex-direction:column;gap:.8cqw;padding:1.3cqw 1.5cqw;border-radius:1.6cqw;background:#FFFFFF;color:#0B1F4D;box-shadow:0 3cqw 5cqw -2.6cqw #000000cc;box-sizing:border-box}
+.wo.gpt{background:#FFFFFF}.wo.cld{background:#FAF8F4}.wo.gem{background:#F8FAFF}.wo.crm{background:#FFFFFF}
+.wo-h{display:flex;align-items:center;gap:.6cqw;font-size:max(1cqw,13.5px);font-weight:700;color:#4A5F8C}
+.wo-h img{width:1.8cqw;height:1.8cqw;border-radius:.5cqw;background:#111;padding:.25cqw}
+.wo.cld .wo-h img{background:#D97757}.wo.gem .wo-h img{background:#7B8CF6}.wo.crm .wo-h img{background:#FF7A59}
+.wo-me{align-self:flex-start;max-width:85%;padding:.6cqw 1cqw;border-radius:1.2cqw;background:#F0F2F5;font-size:max(1.02cqw,14px);color:#111}
+.wo-file{display:flex;align-items:center;gap:.8cqw;padding:.7cqw .9cqw;border-radius:1cqw;box-shadow:0 0 0 1px #0B1F4D1a}
+.wo-file i{font-style:normal;font-size:max(.75cqw,11px);font-weight:900;color:#fff;background:#E5484D;border-radius:.4cqw;padding:.5cqw .4cqw}
+.wo.cld .wo-file i{background:#1A5CFF}
+.wo-file b,.wo-card b{display:block;font-size:max(1.02cqw,14px)}.wo-file small,.wo-card small{display:block;font-size:max(.85cqw,12px);color:#647AA8}
+.wo-mail{display:block;padding:.8cqw 1cqw;border-radius:1cqw;box-shadow:0 0 0 1px #0B1F4D1a;font-size:max(.98cqw,13.5px);line-height:1.55;color:#1C2D57}
+.wo-mail b{display:block;margin-bottom:.3cqw;color:#0B1F4D}
+.wo-card{display:flex;align-items:center;gap:.8cqw;padding:.7cqw .9cqw;border-radius:1cqw;box-shadow:0 0 0 1px #0B1F4D1a}
+.wo-av{width:2.4cqw;height:2.4cqw;border-radius:50%;background:#FFE3D9;color:#C2410C;display:grid;place-items:center;font-weight:900;font-size:max(.9cqw,12.5px)}
+.wo-stg{margin-inline-start:auto;font-size:max(.85cqw,12px);font-weight:700;color:#1F8A4C;background:#E7F8EE;border-radius:99px;padding:.2cqw .7cqw}
+.wo-task{font-size:max(.95cqw,13px);color:#4A5F8C}
+/* 30 days: a blue band that flows out of the night section above, the 30 big, a checklist */
+.tr{padding:0;background:linear-gradient(180deg,#061232 0%,#0B1F4D 6%,#1240C9 40%,#1A5CFF 70%,#3D8BFF 100%);color:#fff;overflow:clip;position:relative}
+.tr .rings path{stroke:#FFFFFF}
+.tr>*:not(.rings){position:relative;z-index:1}
+.tr-in{grid-template-columns:auto 1fr;gap:5cqw;padding:5cqw var(--g) 5.4cqw;border-radius:0;background:none;box-shadow:none}
+.tr-big{display:flex;flex-direction:column;align-items:center}
+.tr-big>b{font-size:20cqw;line-height:.82;font-weight:900;letter-spacing:-.05em;color:#FFFFFF;background:none;-webkit-text-fill-color:#FFFFFF;text-shadow:0 2cqw 4cqw #0B1F4D80;padding:0}
+.tr-big>span{margin-top:1cqw;font-size:1.8cqw;font-weight:400;color:#EAF4FF}
+.tr .nx-h,.tr .nx-h .th2{color:#FFFFFF;text-align:right}
+.tr .nx-h .gr{background:linear-gradient(100deg,#FFFFFF,#CFE6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tr-pts{display:none}
+.tr-ck{list-style:none;margin:2cqw 0 0;padding:0;display:flex;flex-direction:column;gap:1.1cqw}
+.tr-ck li{display:flex;gap:1cqw;align-items:flex-start;font-size:max(1.3cqw,16.5px);line-height:1.6;color:#EAF4FF}
+.tr-ck li b{color:#FFFFFF;font-weight:900}
+.tr-ck li i{flex:none;width:2.2cqw;height:2.2cqw;border-radius:50%;background:#FFFFFF;display:grid;place-items:center;margin-top:.15cqw;box-shadow:0 .8cqw 1.6cqw -.6cqw #0B1F4D}
+.tr-ck li i::after{content:"";width:.5cqw;height:1cqw;border:solid #1A5CFF;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.tr-end{border-top-color:#FFFFFF33}
+.tr-end p{color:#EAF4FF}.tr-end b{color:#FFFFFF}
+.tr-end .cta{background:#FFFFFF!important;color:#1A5CFF!important;box-shadow:0 1.6cqw 3cqw -1.4cqw #0B1F4D!important;animation:none!important}
+.tr-end .cta::after{display:none}
+@container pg (max-width:860px){
+  .pl-brand{gap:min(2cqw,8px);padding:min(1.6cqw,6px) min(3cqw,12px) min(1.6cqw,6px) min(1.6cqw,6px);border-radius:min(3.4cqw,14px)}
+  .pl-brand svg{width:min(8cqw,32px);height:min(8cqw,32px)}.pl-bn{font-size:min(4cqw,16px)}
+  .pn{padding-top:min(10cqw,40px)}
+  .pn .nx-h{font-size:min(8.6cqw,34px)}
+  .pn-txt{text-align:center}
+  .pn p{font-size:min(4.4cqw,17.5px)}
+  .pn-big{font-size:min(7cqw,27px)!important}
+  .pn-mess{display:block!important;position:relative;height:min(220cqw,860px)}
+  .pn-svg{display:none!important}.pn-svg.pn-svgm{display:block!important;position:absolute;inset:0;width:100%;height:100%}
+  .pn-hub{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;flex-direction:column!important;padding:min(4cqw,16px) min(6cqw,24px)!important;z-index:2}
+  .pn-it{position:absolute!important;width:70%!important;z-index:2}
+  .pn-it.i1{right:0!important;left:auto!important;top:0!important;bottom:auto!important}
+  .pn-it.i2{left:0!important;right:auto!important;top:24%!important;bottom:auto!important}
+  .pn-it.i3{right:0!important;left:auto!important;top:auto!important;bottom:22%!important}
+  .pn-it.i4{left:0!important;right:auto!important;top:auto!important;bottom:0!important}
+  .pn-dark .pn-frame p{font-size:min(7cqw,27px)!important}
+  .pn-dark .pn-n{min-width:0;font-size:min(3.2cqw,12.5px)!important;padding:min(.8cqw,3px) min(2.4cqw,10px)}
+  .wa2-h{gap:min(2.4cqw,10px);padding:min(2.4cqw,10px) min(3.4cqw,14px)}.wa2-bk{font-size:min(6cqw,24px)}.wa2-av{width:min(9cqw,36px);height:min(9cqw,36px);font-size:min(3.8cqw,15px)}
+  .wa2-n b{font-size:min(4cqw,16px)}.wa2-st{font-size:min(3cqw,12px)}.wa2-ic{gap:min(4cqw,16px)}.wa2-ic i{width:min(5cqw,20px);height:min(3.8cqw,15px)}.wa2-ic i.c{width:min(4.4cqw,17px);height:min(4.4cqw,17px)}
+  .wa2-day{font-size:min(3cqw,12px);padding:min(.8cqw,3px) min(3cqw,12px);border-radius:min(2cqw,8px)}
+  .pn-msgs{padding:min(4cqw,16px)}
+  .pn-m{border-radius:0 min(3.4cqw,14px) min(3.4cqw,14px) min(3.4cqw,14px)!important;margin-inline-start:min(2cqw,8px)}.pn-m::before{right:min(-2cqw,-8px);width:min(2.2cqw,9px);height:min(3cqw,12px)}
+  .pn-m.me{border-radius:min(3.4cqw,14px) 0 min(3.4cqw,14px) min(3.4cqw,14px)!important;margin-inline-end:min(2cqw,8px)}.pn-m.me::before{left:min(-2cqw,-8px)}
+  .wa2-in{gap:min(2.4cqw,10px);padding:min(2.4cqw,10px) min(3.4cqw,14px)}.wa2-in span{font-size:min(3.6cqw,14px);padding:min(2cqw,8px) min(3.4cqw,14px)}.wa2-in i{width:min(8cqw,32px);height:min(8cqw,32px)}
+  .pn-h3 .a{font-size:min(5.4cqw,21px)}.pn-h3 .b{font-size:min(7cqw,27px)}
+  .pn-p8{text-align:center}.pn-p8 p{font-size:min(4.4cqw,17.5px)!important;margin-top:min(3cqw,12px)!important}
+  .tlx{padding-top:min(12cqw,48px)}
+  .tl2{grid-template-columns:1fr;gap:min(5cqw,20px);margin-top:min(6cqw,24px)}
+  .tl2-dev{order:-1;height:min(120cqw,480px)}
+  .tl2-steps{gap:0}
+  .tl-s{display:none;padding:min(4.4cqw,18px);border-radius:min(5cqw,20px);opacity:1}
+  .tlx[data-z="0"] .tl-s[data-z="0"],.tlx[data-z="1"] .tl-s[data-z="1"],.tlx[data-z="2"] .tl-s[data-z="2"]{display:block}
+  .tl-tg{font-size:min(3.4cqw,13.5px);gap:min(2cqw,8px)}.tl-tg i{width:min(2.2cqw,9px);height:min(2.2cqw,9px)}
+  .tl-s b{font-size:min(5.4cqw,21px);margin-top:min(2cqw,8px)}.tl-tx{font-size:min(4.2cqw,16.5px);margin-top:min(2cqw,8px)}
+  .tl-s em{left:min(4.4cqw,18px);right:min(4.4cqw,18px);bottom:min(2.4cqw,10px)}
+  .tl2-pill{right:0;top:14%;font-size:min(3.4cqw,13.5px);padding:min(2.4cqw,10px) min(3.6cqw,14px);gap:min(2cqw,8px)}.tl2-pill i{width:min(2.2cqw,9px);height:min(2.2cqw,9px)}
+  .tl2-float.f1{right:0;top:auto;bottom:4%;width:68%}.tl2-float.f2{left:0;top:auto;bottom:6%;width:66%}
+  .tl2-float{gap:min(2cqw,8px)}
+  .tl2-lis{font-size:min(3.4cqw,13.5px);padding:min(1.6cqw,6px) min(3cqw,12px);gap:min(1.6cqw,6px)}.tl2-lis .ch{width:min(6cqw,24px)}
+  .tl2-float .tl-chip{font-size:min(3.6cqw,14px);border-radius:min(3.6cqw,14px) min(3.6cqw,14px) min(3.6cqw,14px) min(1cqw,4px)}
+  .tl2-float .tl-tk{padding:min(2cqw,8px) min(3cqw,12px);border-radius:min(3cqw,12px)}
+  .tl2-float .tl-chip:not(.show){display:none}
+  .af{padding-top:min(12cqw,48px)}
+  .af-g{grid-template-columns:1fr;gap:min(4cqw,16px)}
+  .af-tabs{flex-direction:column;overflow:visible;margin:0;padding:min(2.4cqw,10px);border-radius:min(5cqw,20px)}
+  .af-tb{flex:none;padding:min(3cqw,12px);border-radius:min(3.4cqw,14px)}
+  .af-ck{width:min(6.4cqw,26px);height:min(6.4cqw,26px)}.af-tb.on .af-ck::after{width:min(1.6cqw,6px);height:min(3cqw,12px)}
+  .af-tt b{font-size:min(4.4cqw,17.5px)}.af-tt span{font-size:min(3.8cqw,15px)}.af-tb.on .af-tt span{max-height:min(30cqw,120px);margin-top:min(1.4cqw,6px)}
+  .af-app{min-height:min(96cqw,380px)}
+  .wh{padding-top:min(12cqw,48px)}
+  .wh-t{max-width:none}
+  .wh-v{grid-template-columns:1fr;gap:min(4cqw,16px);margin-top:min(6cqw,24px)}
+  .wh-wa{transform:none}
+  .wh-arrow{flex-direction:row;justify-content:center}.wh-arrow i{width:2px;height:min(8cqw,32px);background:linear-gradient(180deg,#8ED3FF,#FFFFFF)}
+  .wh-arrow i::after{left:50%;top:auto;bottom:-.2cqw;width:min(2.4cqw,10px);height:min(2.4cqw,10px);transform:translateX(-50%) rotate(-45deg)}
+  .wh-arrow span{font-size:min(3.4cqw,13.5px)}
+  .wh-dest{display:grid!important;grid-template-columns:1fr 1fr;gap:min(2cqw,8px)}
+  .wh-out{height:min(54cqw,216px)}
+  .wo{gap:min(2.4cqw,10px);padding:min(4cqw,16px);border-radius:min(5cqw,20px)}
+  .wo-h{font-size:min(3.4cqw,13.5px);gap:min(2cqw,8px)}.wo-h img{width:min(6cqw,24px);height:min(6cqw,24px);border-radius:min(1.6cqw,6px)}
+  .wo-me{font-size:min(3.6cqw,14px);padding:min(2cqw,8px) min(3cqw,12px);border-radius:min(3.4cqw,14px)}
+  .wo-file,.wo-card{gap:min(2.4cqw,10px);padding:min(2.4cqw,10px) min(3cqw,12px);border-radius:min(3cqw,12px)}
+  .wo-file i{font-size:min(2.6cqw,10px);padding:min(1.6cqw,6px) min(1.2cqw,5px);border-radius:min(1.2cqw,5px)}
+  .wo-file b,.wo-card b{font-size:min(3.6cqw,14px)}.wo-file small,.wo-card small{font-size:min(3cqw,12px)}
+  .wo-mail{font-size:min(3.4cqw,13.5px);padding:min(2.4cqw,10px) min(3cqw,12px);border-radius:min(3cqw,12px)}
+  .wo-av{width:min(8cqw,32px);height:min(8cqw,32px);font-size:min(3cqw,12px)}.wo-stg,.wo-task{font-size:min(3cqw,12px)}
+  .tr-in{grid-template-columns:1fr;justify-items:center;gap:min(4cqw,16px);padding:min(14cqw,56px) var(--g) min(12cqw,48px)}
+  .tr-big>b{font-size:min(48cqw,190px)}.tr-big>span{font-size:min(5cqw,20px);margin-top:min(2cqw,8px)}
+  .tr .nx-h{text-align:center}
+  .tr-ck{gap:min(4cqw,16px);margin-top:min(6cqw,24px)}
+  .tr-ck li{font-size:min(4.2cqw,16.5px);gap:min(3cqw,12px)}
+  .tr-ck li i{width:min(7cqw,28px);height:min(7cqw,28px)}.tr-ck li i::after{width:min(1.6cqw,6px);height:min(3cqw,12px)}
+}
+@container pg (min-width:861px){
+  .rC .vid2 .vside{order:1!important}
+  .rC .vid2 .vside .moments{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;flex-direction:row}
+  .rC .vid2 .mo{display:flex!important;flex-direction:column!important;min-width:0}
+  .rC .vid2 .mo .mt{width:100%!important;max-width:none!important;display:flex;flex-direction:column;gap:.8cqw}
+}
+.af-tb.on .af-tt span{color:#4A5F8C!important}
+@container pg (min-width:861px){.rC .vid2 .cover .in .tx{display:none!important}}
+@container pg (max-width:860px){
+  .pn-mess{height:min(170cqw,660px)!important}
+  .pn-it.i2{top:22%!important}.pn-it.i3{bottom:20%!important}
+  .pn-msgs{min-height:min(52cqw,210px)!important}
+}
 .pl-c{transform-origin:50% 0}
 @container pg (max-width:860px){.pl-deck{height:min(96cqw,380px)}}
 </style>
@@ -3762,9 +4009,10 @@ const LOGOS=[
  `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#111316"/><path d="M36 10L18 36h12l-4 18 20-28H34z" fill="#C6FF3D"/></svg>`,
  `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0E7C86"/><path d="M32 13l15 6v11c0 10-6.5 17-15 21-8.5-4-15-11-15-21V19z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/><path d="M25 32l5 5 9-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
  `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#1C1A17"/><rect x="5" y="5" width="54" height="54" rx="12" fill="none" stroke="#C9A24A" stroke-width="1.5"/><path d="M18 45V20l14 15 14-15v25" fill="none" stroke="#C9A24A" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/></svg>`];
+const BRAND=[["אביב מדיה","#E8553A"],["טל נכסים","#0F5C4C"],["כהן סדנאות","#6B3FA0"],["BAR FIT","#111316"],["אורי ביטוחים","#0E7C86"],["מרגוליס נדל\"ן","#8A6A22"]];
 const PL=k=>`<section class="plx" id="pl-${k}">${RINGS("left:90%;top:36%;width:52cqw;height:52cqw")}<div class="pl-top"><h2 class="nx-h"><span class="gr">איך השימוש ב-Echo</span><span class="th3">שינה את הדרך שבה הלקוחות שלנו<br>מנהלים את השיחות שלהם?</span></h2></div>
  <div class="pl-g"><div class="pl-list">${PQ.map((q,i)=>`<button class="pl-li${i?'':' on'}" data-i="${i}"><span class="pl-dot lgx">${LOGOS[i]}</span><span><b>${q[0]}</b><small>${q[1]}</small></span><em><i></i></em></button>`).join("")}</div>
-  <div class="pl-deck-w"><div class="pl-deck">${PQ.map((q,i)=>`<article class="pl-c" data-i="${i}"><div class="pl-who"><span class="pl-ph lgx" aria-label="לוגו לדוגמה">${LOGOS[i]}</span><span><b>${q[0]}</b><small>${q[1]}</small></span><span class="pl-n">${String(i+1).padStart(2,"0")}/${String(PQ.length).padStart(2,"0")}</span></div>
+  <div class="pl-deck-w"><div class="pl-deck">${PQ.map((q,i)=>`<article class="pl-c" data-i="${i}"><div class="pl-who"><span class="pl-brand">${LOGOS[i]}<span class="pl-bn" style="color:${BRAND[i][1]}">${BRAND[i][0]}</span></span><span><b>${q[0]}</b><small>${q[1]}</small></span><span class="pl-n">${String(i+1).padStart(2,"0")}/${String(PQ.length).padStart(2,"0")}</span></div>
    <p class="pl-q">"${q[4]}"</p><div class="pl-ft"><span class="pl-ec">${ch("s-look s-blink")}<span class="pl-wv">${Array.from({length:16},(_,j)=>`<i style="--h:${30+Math.round(60*Math.abs(Math.sin(j*1.5+i)))}"></i>`).join("")}</span><em>${q[6]}</em></span><span class="pl-r">${q[5]}</span></div></article>`).join("")}</div>
    <div class="pl-ctl"><button class="pl-pv" aria-label="הקודם"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="pl-cnt2"><b class="pl-cur">01</b><span>/ ${String(PQ.length).padStart(2,"0")}</span></span><span class="pl-dots">${PQ.map(()=>"<i><b></b></i>").join("")}</span><button class="pl-nx" aria-label="הבא"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div>
  <span class="nx-note">דוגמה בלבד · הסיפורים, הלוגואים והשמות האמיתיים יגיעו מתדהר</span></section>`;
@@ -3796,19 +4044,21 @@ const PAIN=k=>`<section class="pn" id="pain-${k}">${RINGS("left:92%;top:14%;widt
    <path d="M500 210 C430 120 330 300 280 180 S180 40 150 88"/><path d="M500 210 C590 110 640 290 720 170 S820 50 860 92"/>
    <path d="M500 210 C420 300 360 140 300 280 S190 380 150 330"/><path d="M500 210 C600 310 650 150 720 290 S820 390 860 330"/>
    <path class="t" d="M150 88 C300 200 260 330 150 330"/><path class="t" d="M860 92 C700 220 760 320 860 330"/><path class="t" d="M280 180 C420 40 600 380 720 170"/></svg>
+  <svg class="pn-svg pn-svgm" viewBox="0 0 400 900" preserveAspectRatio="none" aria-hidden="true"><path d="M200 450 C120 380 330 300 250 200 S120 120 260 70"/><path d="M200 450 C300 400 60 380 140 280"/><path d="M200 450 C110 520 330 560 250 660"/><path d="M200 450 C300 520 70 700 150 840"/><path class="t" d="M260 70 C380 300 40 560 150 840"/><path class="t" d="M140 280 C20 440 380 520 250 660"/></svg>
   <div class="pn-hub">${ch("s-look s-blink")}<b>היום</b><span>23 שיחות</span></div>
   <div class="pn-it i1"><span class="ap cal"><small>יום ה׳</small><b>29</b></span><div class="nf"><div class="nf-h"><span>יומן</span><span>עכשיו</span></div><b>פגישה שצריך להכניס ליומן</b><span class="nf-b">שלומי: "נקבע ביום ראשון?"</span></div></div><div class="pn-it i2"><span class="ap tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><div class="nf"><div class="nf-h"><span>טלפון</span><span>לפני 2 ד׳</span></div><b>לקוח שצריך לחזור אליו</b><span class="nf-b">3 שיחות שלא נענו</span></div></div><div class="pn-it i3"><span class="ap doc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M9 12h6M9 15h6M9 18h4"/></svg></span><div class="nf"><div class="nf-h"><span>מסמכים</span><span>לפני שעה</span></div><b>הצעת מחיר שצריך לשלוח</b><span class="nf-b">טיוטה · לא נשלחה</span></div></div><div class="pn-it i4"><span class="ap nts"><i></i><i></i><i></i></span><div class="nf"><div class="nf-h"><span>פתקים</span><span>הבוקר</span></div><b>פרטים שסיכמת בשיחה אבל לא הספקת לכתוב</b><span class="nf-b">"מה הוא אמר על התשלום?"</span></div></div></div></div>
  <div class="pn-dark"><div class="pn-dl"><div class="pn-frame"><p>והבעיה מתחילה כשהדברים האלה כבר משפיעים <span class="gr">על העבודה שלך מול הלקוחות.</span></p></div><div class="pn-lines">
-   <p class="pn-l" data-i="0"><span class="pn-n">01</span><span>לקוח מתקשר לשאול מה קורה עם משהו שהבטחת לו, <b>ואתה מתחיל לחפש בהודעות ובפתקים</b> כדי להבין על מה דיברתם.</span></p>
-   <p class="pn-l" data-i="1"><span class="pn-n">02</span><span>לפעמים אתה צריך לבקש ממנו <b>להזכיר לך משהו שהוא כבר הסביר.</b></span></p>
-   <p class="pn-l" data-i="2"><span class="pn-n">03</span><span>ובמקרים אחרים, אתה מגלה <b>ששכחת לחזור אליו, או שלא שלחת את מה שסיכמתם בזמן.</b></span></p></div>
+   <p class="pn-l" data-i="0"><span class="pn-n">09:12</span><span>לקוח מתקשר לשאול מה קורה עם משהו שהבטחת לו, <b>ואתה מתחיל לחפש בהודעות ובפתקים</b> כדי להבין על מה דיברתם.</span></p>
+   <p class="pn-l" data-i="1"><span class="pn-n">09:15</span><span>לפעמים אתה צריך לבקש ממנו <b>להזכיר לך משהו שהוא כבר הסביר.</b></span></p>
+   <p class="pn-l" data-i="2"><span class="pn-n">לפני 3 ימים</span><span>ובמקרים אחרים, אתה מגלה <b>ששכחת לחזור אליו, או שלא שלחת את מה שסיכמתם בזמן.</b></span></p></div>
   </div>
-  <div class="pn-chat"><div class="pn-ch"><span class="pn-av">ד</span><span><b>דני לוי</b><small>לקוח</small></span></div>
-   <div class="pn-msgs"><p class="pn-m" data-i="0">היי, מה קורה עם מה שדיברנו עליו בשבוע שעבר?<em>09:12</em></p><span class="pn-srch" data-i="0">מחפש בפתקים...</span>
-    <p class="pn-m me" data-i="1">רגע, תזכיר לי מה סיכמנו על המחיר?<em>09:14</em></p>
+  <div class="pn-chat"><div class="wa2-h"><span class="wa2-bk">‹</span><span class="wa2-av">ד</span><span class="wa2-n"><b>דני לוי</b><small class="wa2-st">מקליד/ה...</small></span><span class="wa2-ic"><i class="v"></i><i class="c"></i></span></div>
+   <div class="pn-msgs"><span class="wa2-day">היום</span><p class="pn-m" data-i="0">היי, מה קורה עם מה שדיברנו עליו בשבוע שעבר?<em>09:12</em></p><span class="pn-srch" data-i="0">מחפש בפתקים...</span>
+    <p class="pn-m me" data-i="1">רגע, תזכיר לי מה סיכמנו על המחיר?<em>09:14 <i>✓✓</i></em></p>
     <p class="pn-m" data-i="1">אמרתי לך את זה בשיחה...<em>09:15</em></p>
-    <p class="pn-m late" data-i="2">עדיין מחכה להצעה. נדבר?<em>לפני 3 ימים</em></p></div></div></div>
- <div class="pn-end"><p class="pn-p8">מעבר לזמן ולסדר שברור שלא קיים, <b>זה משפיע על איך שהלקוחות חווים את העבודה איתך.</b> ואתה נשאר עם <mark>התחושה המעצבנת הזאת בסוף היום, שאולי יש עוד משהו שלא זכרת לעשות.</mark></p>
+    <p class="pn-m late" data-i="2">עדיין מחכה להצעה. נדבר?<em>09:40</em></p></div>
+   <div class="wa2-in"><span>הודעה</span><i></i></div></div</div></div></div>
+ <div class="pn-end"><div class="pn-p8"><h3 class="pn-h3"><span class="a">מעבר לזמן ולסדר שברור שלא קיים</span> <span class="b">זה משפיע על איך שהלקוחות חווים את העבודה איתך.</span></h3><p>ואתה נשאר עם <mark>התחושה המעצבנת הזאת בסוף היום, שאולי יש עוד משהו שלא זכרת לעשות.</mark></p></div>
   <div class="pn-frame2"><p>וכל זה כשאתה בסך הכול מנסה לעשות את העבודה שלך כמו שצריך. <b>להקשיב ללקוחות, לתת להם שירות טוב ולהתקדם עם הדברים שסיכמתם.</b></p></div>
   <div class="pn-echo">${ch("s-happy")}<p>פה בדיוק נכנס הרעיון של <b>עוזר טלפוני שמקשיב לשיחות יחד איתך,</b> רושם, מסכם ומרכז בשבילך את הדברים שצריך לעשות אחרי שמנתקים, ומתחבר למערכות הניהול ולכלי ה-AI שאתה כבר עובד איתם.</p></div></div>
 </section>`;
@@ -3817,18 +4067,15 @@ const PAIN=k=>`<section class="pn" id="pain-${k}">${RINGS("left:92%;top:14%;widt
 const TLW=Array.from({length:96},(_,i)=>{const p=i/95;const z=p<.28?0:p<.72?1:2;const h=z===1?28+Math.round(70*Math.abs(Math.sin(i*1.37)*Math.cos(i*.41))):z===0?6+(i%3)*3:5+(i%2)*3;return `<i data-z="${z}" style="--h:${h}"></i>`;}).join("");
 const TL=k=>`<section class="tlx" data-z="0" id="tl-${k}">${RINGS("left:8%;top:30%;width:48cqw;height:48cqw")}
  <h2 class="nx-h"><span class="th2">אתה ממשיך לדבר עם הלקוחות שלך,</span> <span class="gr">Echo דואג לעשות סדר</span></h2>
- <div class="tl-stage"><div class="tl-scenes">
-   <div class="tl-sc s0"><div class="tl-card"><span class="tl-tag">לפני השיחה</span><div class="tl-con">${ch("s-look s-blink")}<span class="tl-link"><i></i><i></i><i></i></span><span class="tl-phone"><small>הטלפון שלך</small><b>052-4418832</b></span></div><span class="tl-st"><i></i><span class="a">מחבר את Echo...</span><span class="b">מחובר. כל שיחה מתועדת</span></span></div></div>
-   <div class="tl-sc s1"><div class="tl-card"><span class="tl-tag">במהלך השיחה</span><div class="tl-callh"><span class="tl-rec"></span><b>שלומי דהן</b><span class="tl-ctm">00:00</span></div>
-    <div class="tl-chips"><span class="tl-chip" data-at=".36">"אני צריך <b>הצעת מחיר עד חמישי</b>"</span><span class="tl-chip" data-at=".48">"תשלח לי את <b>החוזה מחר בבוקר</b>"</span><span class="tl-chip" data-at=".6">"נדבר <b>ביום ראשון ב-10:00</b>"</span></div><span class="tl-lis">${ch("s-rec s-blink")}Echo מקשיב ורושם</span></div></div>
-   <div class="tl-sc s2"><div class="tl-card"><span class="tl-tag">אחרי שמנתקים</span><div class="tl-sum"><b>סיכום השיחה עם שלומי דהן</b><small>נוצר 4 שניות אחרי הניתוק</small></div>
-    <div class="tl-tasks"><span class="tl-tk" data-at=".78"><i></i>לשלוח הצעת מחיר עד חמישי</span><span class="tl-tk" data-at=".84"><i></i>לשלוח חוזה מחר בבוקר</span><span class="tl-tk" data-at=".9"><i></i>שיחת המשך ביום ראשון, 10:00</span></div>
-    <span class="tl-sent" data-at=".95"><img src="img/ic-whatsapp.svg" alt="">נשלח לוואטסאפ ול-CRM</span></div></div></div>
-  <div class="tl-axis"><div class="tl-wave">${TLW}</div><div class="tl-head"><span class="tl-rider">${ch("s-look s-blink")}</span></div>
-   <span class="tl-mk m0"></span><span class="tl-mk m1"></span><span class="tl-mk m2"></span></div>
-  <div class="tl-steps">${[["01","מחברים את Echo לטלפון שלך","מתאמים פגישת הטמעה קצרה, ואנחנו מחברים את Echo לטלפון שממנו אתה מנהל את השיחות."],
-   ["02","ממשיכים לנהל שיחות כרגיל","אתה ממשיך לקבל ולהוציא שיחות מהטלפון שלך. בזמן שאתה מדבר עם הלקוח ומתרכז במה שהוא אומר, Echo מקשיב ומתעד את השיחה."],
-   ["03","מסיימים שיחה ומקבלים סיכום באפליקציה ובוואטסאפ","כמה שניות אחרי שאתה מנתק, Echo שולח לך את עיקרי השיחה בנקודות ואת המשימות שעלו ממנה. הכל כתוב ומסודר, כדי שתדע מה צריך לעשות בהמשך."]].map((s,i)=>`<button class="tl-s" data-z="${i}"><span class="tl-n">${s[0]}</span><b>${s[1]}</b><span>${s[2]}</span></button>`).join("")}</div></div>
+ <div class="tl2"><div class="tl2-steps">${[["לפני השיחה","מחברים את Echo לטלפון שלך","מתאמים פגישת הטמעה קצרה, ואנחנו מחברים את Echo לטלפון שממנו אתה מנהל את השיחות."],
+   ["במהלך השיחה","ממשיכים לנהל שיחות כרגיל","אתה ממשיך לקבל ולהוציא שיחות מהטלפון שלך. בזמן שאתה מדבר עם הלקוח ומתרכז במה שהוא אומר, Echo מקשיב ומתעד את השיחה."],
+   ["אחרי שמנתקים","מסיימים שיחה ומקבלים סיכום באפליקציה ובוואטסאפ","כמה שניות אחרי שאתה מנתק, Echo שולח לך את עיקרי השיחה בנקודות ואת המשימות שעלו ממנה. הכל כתוב ומסודר, כדי שתדע מה צריך לעשות בהמשך."]].map((s,i)=>`<button class="tl-s" data-z="${i}"><span class="tl-tg"><i></i>${s[0]}</span><b>${s[1]}</b><span class="tl-tx">${s[2]}</span><em><i></i></em></button>`).join("")}</div>
+  <div class="tl2-dev"><span class="tl2-glow"></span><div class="tl2-ph"><img src="img/r-iphone-cut.webp" alt="אייפון עם Echo"><div class="tl2-scr">
+   <img class="tl2-l l0" src="img/app-home-m.webp" alt="מסך הבית של Echo"><div class="tl2-l l1"><div class="ios-call"><span class="ios-nm">שלומי דהן</span><span class="ios-tm tl-ctm">00:00</span><div class="ios-btns"><span class="ios-b"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 1 3 3v5a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3zM5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i>השתק</span><span class="ios-b"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h.01M12 6h.01M18 6h.01M6 12h.01M12 12h.01M18 12h.01M6 18h.01M12 18h.01M18 18h.01"/></svg></i>מקלדת</span><span class="ios-b"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zM16 9a4 4 0 0 1 0 6"/></svg></i>רמקול</span><span class="ios-b"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i>הוסף שיחה</span><span class="ios-b"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h12v10H3zM15 10l6-3v10l-6-3"/></svg></i>FaceTime</span><span class="ios-b"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0"/></svg></i>אנשי קשר</span></div><span class="ios-end"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10c5-4 13-4 18 0l-2 3-3-1v-2c-2-1-6-1-8 0v2l-3 1z"/></svg></span></div></div><img class="tl2-l l2" src="img/app-sum-m.webp" alt="סיכום שיחה באפליקציה של Echo"></div></div>
+   <span class="tl2-pill p0"><i></i><span class="a">מחבר את Echo למספר שלך...</span><span class="b">מחובר. כל שיחה מתועדת</span></span>
+   <div class="tl2-float f1"><span class="tl2-lis">${ch("s-rec s-blink")}Echo מקשיב ורושם</span><span class="tl-chip" data-at=".36">"אני צריך <b>הצעת מחיר עד חמישי</b>"</span><span class="tl-chip" data-at=".48">"תשלח לי את <b>החוזה מחר בבוקר</b>"</span><span class="tl-chip" data-at=".6">"נדבר <b>ביום ראשון ב-10:00</b>"</span></div>
+   <div class="tl2-float f2"><span class="tl-tk" data-at=".78"><i></i>לשלוח הצעת מחיר עד חמישי</span><span class="tl-tk" data-at=".84"><i></i>לשלוח חוזה מחר בבוקר</span><span class="tl-sent" data-at=".9"><img src="img/ic-whatsapp.svg" alt="">הסיכום נשלח לוואטסאפ</span></div></div></div>
+ <div class="tl-axis"><div class="tl-wave">${TLW}</div><div class="tl-head"><span class="tl-rider">${ch("s-look s-blink")}</span></div><span class="tl-mk m0"></span><span class="tl-mk m1"></span><span class="tl-mk m2"></span></div>
 </section>`;
 
 /* ===== 06 continued, copy from doc 06 word for word ===== */
@@ -3841,7 +4088,7 @@ const WV6=(n,s,p)=>Array.from({length:n},(_,i)=>`<i class="${i<p?'p':''}" style=
 const AFT6=k=>`<section class="af" data-t="1" id="af-${k}">${RINGS("left:94%;top:20%;width:40cqw;height:40cqw")}
  <h2 class="nx-h"><span class="th2">וגם אחרי שהשיחה נגמרה,</span> <span class="gr">אפשר לחזור לכל פרט.</span></h2>
  <p class="af-sub">במקום לעבור שוב על שיחה שלמה, אתה יכול לבקש מ-Echo למצוא בשבילך את המידע.</p>
- <div class="af-g"><div class="af-tabs">${F4.map((f,i)=>`<button class="af-tb${i?'':' on'}" data-n="${i+1}"><span class="af-no">0${i+1}</span><span><b>${f[0]}</b><span>${f[1]}</span></span><em><i></i></em></button>`).join("")}</div>
+ <div class="af-g"><div class="af-tabs">${F4.map((f,i)=>`<button class="af-tb${i?'':' on'}" data-n="${i+1}"><span class="af-ck"></span><span class="af-tt"><b>${f[0]}</b><span>${f[1]}</span></span><em><i></i></em></button>`).join("")}</div>
   <div class="af-app"><aside class="af-side"><span class="af-lg">${ch("s-look s-blink")}<b>Echo</b></span><span class="af-nv on" data-n="1">שיחות</span><span class="af-nv" data-n="2">משימות</span><span class="af-nv" data-n="3">חיפוש</span><span class="af-nv" data-n="4">שאל את Echo</span><span class="af-me"><i>א</i>אלירן</span></aside>
    <div class="af-main"><div class="af-top"><b class="af-ttl">השיחות שלי</b><span class="af-srch">חיפוש בכל השיחות</span></div>
     <div class="af-pane p1">${CL6.map(c=>`<div class="af-row${c[3]?' pl':''}"><span class="af-pb"></span><span><b>${c[0]}</b><small>${c[1]} · סיכום ומשימות מוכנים</small></span><span class="af-mw">${WV6(26,c[2].length+c[0].length,c[3]?11:0)}</span><span class="af-du">${c[2]}</span></div>`).join("")}</div>
@@ -3854,22 +4101,27 @@ const AFT6=k=>`<section class="af" data-t="1" id="af-${k}">${RINGS("left:94%;top
      <div class="af-ec">${ch("s-happy")}<div class="af-bd">סיכמתם תשלום בשלוש פעימות, הראשונה בחתימה. הבטחת לשלוח לו את החוזה המעודכן עד סוף השבוע.<span class="af-src">מהשיחה עם דני לוי · 12.10, 37:12</span></div></div></div></div>
    </div></div></div></section>`;
 const DEST=[["openai","ChatGPT","טיוטת הצעת מחיר מוכנה","הצעת מחיר · שלומי דהן.pdf"],["claude","Claude","חוזה עודכן עם תנאי התשלום","חוזה · שלומי דהן.docx"],["googlegemini","Gemini","מייל המשך נכתב","מייל המשך · שלומי דהן"],["hubspot","CRM","כרטיס הלקוח עודכן","שלומי דהן · שלב: הצעה נשלחה"]];
+const WOUT=[`<div class="wo gpt"><span class="wo-h"><img src="img/ic-openai.svg" alt="">ChatGPT</span><span class="wo-me">צור הצעת מחיר מהסיכום של השיחה עם שלומי</span><span class="wo-file"><i>PDF</i><span><b>הצעת מחיר · שלומי דהן</b><small>כולל התקנה · נוצר עכשיו</small></span></span></div>`,
+ `<div class="wo cld"><span class="wo-h"><img src="img/ic-claude.svg" alt="">Claude</span><span class="wo-me">עדכן את החוזה לפי מה שסיכמנו בשיחה</span><span class="wo-file"><i>DOCX</i><span><b>חוזה · שלומי דהן</b><small>3 שינויים לפי השיחה</small></span></span></div>`,
+ `<div class="wo gem"><span class="wo-h"><img src="img/ic-googlegemini.svg" alt="">Gemini</span><span class="wo-me">כתוב מייל המשך ללקוח</span><span class="wo-mail"><b>נושא: ההצעה שדיברנו עליה</b>היי שלומי, כמו שסיכמנו בשיחה, מצורפת הצעת המחיר כולל ההתקנה...</span></div>`,
+ `<div class="wo crm"><span class="wo-h"><img src="img/ic-hubspot.svg" alt="">CRM</span><span class="wo-card"><span class="wo-av">שד</span><span><b>שלומי דהן</b><small>עודכן מהשיחה · 14:38</small></span><span class="wo-stg">הצעה נשלחה</span></span><span class="wo-task">משימה: שיחת המשך ביום ראשון, 10:00</span></div>`];
 const WHR6=k=>`<section class="wh" id="wh-${k}">${RINGS("left:6%;top:70%;width:46cqw;height:46cqw")}
- <div class="wh-g"><div class="wh-t"><h2 class="nx-h"><span class="th2">והחלק הנוח?</span> <span class="gr">Echo עובד איפה שאתה כבר עובד.</span></h2>
+ <div class="wh-t"><h2 class="nx-h"><span class="th2">והחלק הנוח?</span> <span class="gr">Echo עובד איפה שאתה כבר עובד.</span></h2>
   <p>הסיכומים והמשימות מגיעים לוואטסאפ שלך. אתה יכול לחבר את Echo גם <bdi>ל-ChatGPT</bdi>, <bdi>ל-Claude</bdi>, <bdi>ל-Gemini</bdi> ולמערכת ניהול הלקוחות שלך, כדי לעבוד עם המידע מהשיחות גם שם. ככה הדברים שסיכמת בטלפון יכולים להמשיך איתך גם לשלב הבא בעבודה, <b>בלי שתצטרך להעתיק הכל בעצמך.</b></p></div>
-  <div class="wh-v"><div class="wh-wa"><div class="wh-wah">${ch("s-happy")}<span><b>Echo</b><small>סיכום שיחה</small></span></div><div class="wh-wab"><span class="wh-msg"><b>סיכום השיחה עם שלומי דהן</b>• מבקש הצעת מחיר כולל התקנה<br>• לשלוח חוזה מחר בבוקר<br>• שיחת המשך ביום ראשון, 10:00<em>14:38</em></span></div></div>
-   <div class="wh-flow"><span class="wh-line"><i></i></span><div class="wh-dest">${DEST.map((d,i)=>`<span class="wh-d${i?'':' on'}" data-i="${i}"><span class="wh-ic" style="background:${(APPS.find(a=>a[0]===d[0])||[0,0,"#0B1F4D"])[2]}"><img src="img/ic-${d[0]}.svg" alt=""></span>${d[1]}</span>`).join("")}</div>
-    <div class="wh-out">${DEST.map((d,i)=>`<div class="wh-o${i?'':' on'}" data-i="${i}"><span class="wh-ok"></span><span><b>${d[2]}</b><small>${d[3]}</small></span></div>`).join("")}</div></div></div></div></section>`;
-const TRY6=k=>`<section class="tr" id="tr-${k}"><div class="tr-in"><div class="tr-big"><b>30</b><span>יום</span>${ch("s-happy")}</div>
+ <div class="wh-v"><div class="wh-wa"><div class="wh-wah">${ch("s-happy")}<span><b>Echo</b><small>סיכום שיחה · וואטסאפ</small></span></div><div class="wh-wab"><span class="wh-msg"><b>סיכום השיחה עם שלומי דהן</b>• מבקש הצעת מחיר כולל התקנה<br>• לשלוח חוזה מחר בבוקר<br>• שיחת המשך ביום ראשון, 10:00<em>14:38</em></span></div></div>
+  <div class="wh-arrow"><i></i><span>ממשיך איתך ל...</span></div>
+  <div class="wh-tool"><div class="wh-dest">${DEST.map((d,i)=>`<button class="wh-d${i?'':' on'}" data-i="${i}"><span class="wh-ic" style="background:${(APPS.find(a=>a[0]===d[0])||[0,0,"#0B1F4D"])[2]}"><img src="img/ic-${d[0]}.svg" alt=""></span>${d[1]}</button>`).join("")}</div>
+   <div class="wh-out">${WOUT.map((w,i)=>`<div class="wh-o${i?'':' on'}" data-i="${i}">${w}</div>`).join("")}</div></div></div></section>`;
+const TRY6=k=>`<section class="tr" id="tr-${k}">${RINGS("left:92%;top:40%;width:44cqw;height:44cqw")}<div class="tr-in"><div class="tr-big"><b>30</b><span>יום ניסיון ב-Echo</span></div>
  <div class="tr-c"><h2 class="nx-h"><span class="th2">קח 30 יום לראות איך Echo</span> <span class="gr">משתלב ביום העבודה שלך.</span></h2>
-  <div class="tr-pts"><div class="tr-pt"><div class="tr-ui u1"><span>יום 1 מתוך 30</span><i><b></b></i></div><b>30 יום ללא עלות:</b><p>תוכל להשתמש ב-Echo בשיחות האמיתיות שלך ולבדוק איך הוא עוזר לך בניהול השיחות והמשימות.</p></div>
-   <div class="tr-pt"><div class="tr-ui u2"><span>פרטי תשלום</span><em>לא נדרש</em></div><b>בלי כרטיס אשראי ובלי התחייבות:</b><p>לא צריך להזין פרטי תשלום כדי להתחיל את הניסיון.</p></div>
-   <div class="tr-pt"><div class="tr-ui u3"><span class="tr-play"></span><span>הקלטה · שלומי דהן</span><em>בחשבון שלך</em></div><b>השיחות שלך נשארות שלך:</b><p>ההקלטות נשמרות בענן בחשבון שלך, ואתה זה שניגש אליהן ומאזין להן.</p></div></div>
+  <ul class="tr-ck"><li><i></i><span><b>30 יום ללא עלות:</b> תוכל להשתמש ב-Echo בשיחות האמיתיות שלך ולבדוק איך הוא עוזר לך בניהול השיחות והמשימות.</span></li>
+   <li><i></i><span><b>בלי כרטיס אשראי ובלי התחייבות:</b> לא צריך להזין פרטי תשלום כדי להתחיל את הניסיון.</span></li>
+   <li><i></i><span><b>השיחות שלך נשארות שלך:</b> ההקלטות נשמרות בענן בחשבון שלך, ואתה זה שניגש אליהן ומאזין להן.</span></li></ul>
   <div class="tr-end"><p>לקראת סוף החודש נשלח לך סיכום של השימוש שלך ב-Echo, ונשאל אם תרצה להמשיך. אם תחליט שלא, <b>ניפרד כידידים ותפסיד את העוזר הטלפוני הכי טוב שיכולת לבקש.</b></p><a class="cta">${C.cta}</a></div></div></div></section>`;
 
 /* ===== 05 video testimonials as real reels: captions burned in, the middle one plays ===== */
 const RL=[["אביב","משרד שיווק","סוף סוף אני מקשיב ללקוח","במקום לכתוב בזמן השיחה"],["טל","נדל\"ן","שיחה של 40 דקות","Echo מצא את הרגע בשנייה"],["איציק כהן","סדנאות והרצאות","ההצעה יוצאת באותו יום","ולא אחרי שלושה ימים"],["בר","מאמן כושר","אני מגיע לאימון הראשון","כבר מכיר את המתאמן"],["אורי","סוכן ביטוח","אף מועד חידוש","לא מתפספס לי יותר"]];
-const REELS=k=>`<section class="rls" id="rls-${k}"><h2 class="nx-h"><span class="th2">עסקים שמשתמשים ב-Echo</span> <span class="gr">מספרים</span></h2>
+const REELS=k=>`<section class="rls" id="rls-${k}"><h2 class="nx-h"><span class="th2">עסקים שמשתמשים ב-Echo</span> <span class="gr">מספרים על העבודה איתו</span></h2>
  <div class="rls-st">${RL.map((r,i)=>`<article class="rl g${i%3}" data-i="${i}"><span class="rl-bar">${[0,1,2].map(()=>"<i><b></b></i>").join("")}</span><span class="rl-snd"></span>
   <img class="rl-img" src="img/rl-${i+1}.webp" alt="" loading="lazy"><div class="rl-cap"><span class="rl-l1">${r[2]}</span><span class="rl-l2">${r[3]}</span></div>
   <span class="rl-pl"></span><div class="rl-who"><span class="rl-av"></span><span><b>${r[0]}</b><small>${r[1]}</small></span></div></article>`).join("")}</div>
@@ -3990,6 +4242,7 @@ document.querySelectorAll(".tlx").forEach(sec=>{const bars=[...sec.querySelector
  const draw=p=>{head.style.right=(p*100)+"%";const lim=p*(n-1);bars.forEach((b,i)=>b.classList.toggle("on",i<=lim));
   const z=p<.28?0:p<.72?1:2;if(sec.dataset.z!=z)sec.dataset.z=z;sec.classList.toggle("cn",p>.15);
   at.forEach(e=>e.classList.toggle("show",p>=+e.dataset.at));
+  const zb=[[0,.28],[.28,.72],[.72,1]][z];const zp=(p-zb[0])/(zb[1]-zb[0]);sec.querySelectorAll(".tl-s em i").forEach((e,i)=>e.style.width=(i===z?zp*100:0)+"%");
   if(z===1){const s=Math.round((p-.28)/.44*312);tm.textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}};
  const loop=ts=>{if(t0===null)t0=ts;const p=((ts-t0)/D+off)%1;draw(p);if(vis)raf=requestAnimationFrame(loop);};
  sec.querySelectorAll(".tl-s").forEach(b=>b.onclick=()=>{off=[0,.29,.73][+b.dataset.z];t0=null;if(reduce)draw(off+.2);});
