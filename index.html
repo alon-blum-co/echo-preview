@@ -2709,6 +2709,12 @@ body{padding:0!important;margin:0;background:#FFFFFF}
 .pl-c[data-p="0"]{border-radius:2.4cqw}
 .tst .win{border-radius:2.6cqw}
 @container pg (max-width:860px){.pl-c[data-p="0"]{border-radius:min(5.4cqw,22px)}.tst .win{border-radius:min(6cqw,24px)}}
+/* invented logos in the story cards and the list */
+.pl-ph.lgx,.pl-dot.lgx{border:0!important;background:none!important;padding:0;overflow:hidden;box-shadow:0 .6cqw 1.4cqw -.6cqw #0B1F4D80}
+.pl-ph.lgx svg,.pl-dot.lgx svg{display:block;width:100%;height:100%}
+.pl-dot.lgx{border-radius:28%!important}
+.pl-li:not(.on) .pl-dot.lgx{filter:saturate(.35);opacity:.7}
+.pl-li.on .pl-dot.lgx{animation:none;box-shadow:0 0 0 .4cqw #1A5CFF33,0 .6cqw 1.4cqw -.6cqw #0B1F4D80}
 
 /* ===== 04 pain ===== */
 .pn{position:relative;overflow:clip;padding:6cqw var(--g) 5cqw;color:#0B1F4D;
@@ -3267,6 +3273,12 @@ body{padding:0!important;margin:0;background:#FFFFFF}
   .rls-ctl{gap:min(4cqw,16px);margin-top:min(6cqw,24px)}.rls-ctl button{width:min(12cqw,48px);height:min(12cqw,48px)}
   .rls-dots i{width:min(2cqw,8px);height:min(2cqw,8px)}.rls-dots i.on{width:min(6cqw,24px)}
 }
+.rl-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.rl.on .rl-img{animation:rlz 7s ease-out both}
+@keyframes rlz{from{transform:scale(1.06)}to{transform:scale(1)}}
+.rl::after{z-index:1;height:62%;background:linear-gradient(transparent,#050B1Af0)}
+.rl::before{content:"";position:absolute;inset:0 0 auto;height:22%;z-index:1;background:linear-gradient(#050B1A99,transparent)}
+.rl-av{display:none}
 .pl-c{transform-origin:50% 0}
 @container pg (max-width:860px){.pl-deck{height:min(96cqw,380px)}}
 </style>
@@ -3741,9 +3753,18 @@ const PQ=[["אביב","משרד שיווק","א",0,"הייתי מסכם שיחו
  ["בר","מאמן כושר","ב",0,"שיחות ההיכרות עם מתאמנים חדשים היו רק בזיכרון. היום <mark>אני מגיע לאימון הראשון כשאני כבר מכיר את המתאמן,</mark> כולל הפציעה שהוא הזכיר בשיחה.","12 שיחות היכרות בשבוע","11:30"],
  ["אורי","סוכן ביטוח","א",1,"עקבתי אחרי פוליסות ומועדים באקסל, ידנית. עכשיו המשימות מהשיחות נכנסות ל-CRM, ו<mark>אף מועד חידוש לא מתפספס לי יותר.</mark>","כל החידושים טופלו בזמן","05:04"],
  ["מיכאל מרגוליס","נדל\"ן","מ",2,"עשרות שיחות ביום, ולא היה לי זמן לסדר אחרי אף אחת. היום <mark>כל בוקר מתחיל עם רשימת משימות מוכנה מאתמול.</mark>","30+ שיחות ביום מתועדות","03:55"]];
+
+/* invented logos for the demo stories (marked as an example on the page) */
+const LOGOS=[
+ `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#FF6B4A"/><circle cx="32" cy="32" r="15" fill="none" stroke="#fff" stroke-width="4"/><path d="M28 25l11 7-11 7z" fill="#fff"/><circle cx="49" cy="15" r="4" fill="#FFD3C7"/></svg>`,
+ `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0F5C4C"/><path d="M14 32L32 17l18 15" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 30v16h24V30" fill="none" stroke="#fff" stroke-width="4.5" stroke-linejoin="round"/><rect x="28.5" y="36" width="7" height="10" rx="1.5" fill="#9BE3C8"/></svg>`,
+ `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#6B3FA0"/><rect x="16" y="34" width="8" height="14" rx="2" fill="#fff" opacity=".6"/><rect x="28" y="26" width="8" height="22" rx="2" fill="#fff" opacity=".8"/><rect x="40" y="16" width="8" height="32" rx="2" fill="#fff"/></svg>`,
+ `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#111316"/><path d="M36 10L18 36h12l-4 18 20-28H34z" fill="#C6FF3D"/></svg>`,
+ `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0E7C86"/><path d="M32 13l15 6v11c0 10-6.5 17-15 21-8.5-4-15-11-15-21V19z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/><path d="M25 32l5 5 9-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+ `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#1C1A17"/><rect x="5" y="5" width="54" height="54" rx="12" fill="none" stroke="#C9A24A" stroke-width="1.5"/><path d="M18 45V20l14 15 14-15v25" fill="none" stroke="#C9A24A" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/></svg>`];
 const PL=k=>`<section class="plx" id="pl-${k}">${RINGS("left:90%;top:36%;width:52cqw;height:52cqw")}<div class="pl-top"><h2 class="nx-h"><span class="gr">איך השימוש ב-Echo</span><span class="th3">שינה את הדרך שבה הלקוחות שלנו<br>מנהלים את השיחות שלהם?</span></h2></div>
- <div class="pl-g"><div class="pl-list">${PQ.map((q,i)=>`<button class="pl-li${i?'':' on'}" data-i="${i}"><span class="pl-dot"></span><span><b>${q[0]}</b><small>${q[1]}</small></span><em><i></i></em></button>`).join("")}</div>
-  <div class="pl-deck-w"><div class="pl-deck">${PQ.map((q,i)=>`<article class="pl-c" data-i="${i}"><div class="pl-who"><span class="pl-ph" aria-label="מקום ללוגו"></span><span><b>${q[0]}</b><small>${q[1]}</small></span><span class="pl-n">${String(i+1).padStart(2,"0")}/${String(PQ.length).padStart(2,"0")}</span></div>
+ <div class="pl-g"><div class="pl-list">${PQ.map((q,i)=>`<button class="pl-li${i?'':' on'}" data-i="${i}"><span class="pl-dot lgx">${LOGOS[i]}</span><span><b>${q[0]}</b><small>${q[1]}</small></span><em><i></i></em></button>`).join("")}</div>
+  <div class="pl-deck-w"><div class="pl-deck">${PQ.map((q,i)=>`<article class="pl-c" data-i="${i}"><div class="pl-who"><span class="pl-ph lgx" aria-label="לוגו לדוגמה">${LOGOS[i]}</span><span><b>${q[0]}</b><small>${q[1]}</small></span><span class="pl-n">${String(i+1).padStart(2,"0")}/${String(PQ.length).padStart(2,"0")}</span></div>
    <p class="pl-q">"${q[4]}"</p><div class="pl-ft"><span class="pl-ec">${ch("s-look s-blink")}<span class="pl-wv">${Array.from({length:16},(_,j)=>`<i style="--h:${30+Math.round(60*Math.abs(Math.sin(j*1.5+i)))}"></i>`).join("")}</span><em>${q[6]}</em></span><span class="pl-r">${q[5]}</span></div></article>`).join("")}</div>
    <div class="pl-ctl"><button class="pl-pv" aria-label="הקודם"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="pl-cnt2"><b class="pl-cur">01</b><span>/ ${String(PQ.length).padStart(2,"0")}</span></span><span class="pl-dots">${PQ.map(()=>"<i><b></b></i>").join("")}</span><button class="pl-nx" aria-label="הבא"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div>
  <span class="nx-note">דוגמה בלבד · הסיפורים, הלוגואים והשמות האמיתיים יגיעו מתדהר</span></section>`;
@@ -3850,7 +3871,7 @@ const TRY6=k=>`<section class="tr" id="tr-${k}"><div class="tr-in"><div class="t
 const RL=[["אביב","משרד שיווק","סוף סוף אני מקשיב ללקוח","במקום לכתוב בזמן השיחה"],["טל","נדל\"ן","שיחה של 40 דקות","Echo מצא את הרגע בשנייה"],["איציק כהן","סדנאות והרצאות","ההצעה יוצאת באותו יום","ולא אחרי שלושה ימים"],["בר","מאמן כושר","אני מגיע לאימון הראשון","כבר מכיר את המתאמן"],["אורי","סוכן ביטוח","אף מועד חידוש","לא מתפספס לי יותר"]];
 const REELS=k=>`<section class="rls" id="rls-${k}"><h2 class="nx-h"><span class="th2">עסקים שמשתמשים ב-Echo</span> <span class="gr">מספרים</span></h2>
  <div class="rls-st">${RL.map((r,i)=>`<article class="rl g${i%3}" data-i="${i}"><span class="rl-bar">${[0,1,2].map(()=>"<i><b></b></i>").join("")}</span><span class="rl-snd"></span>
-  <span class="rl-ph"></span><div class="rl-cap"><span class="rl-l1">${r[2]}</span><span class="rl-l2">${r[3]}</span></div>
+  <img class="rl-img" src="img/rl-${i+1}.webp" alt="" loading="lazy"><div class="rl-cap"><span class="rl-l1">${r[2]}</span><span class="rl-l2">${r[3]}</span></div>
   <span class="rl-pl"></span><div class="rl-who"><span class="rl-av"></span><span><b>${r[0]}</b><small>${r[1]}</small></span></div></article>`).join("")}</div>
  <div class="rls-ctl"><button class="rls-pv" aria-label="הקודם"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="rls-dots">${RL.map(()=>"<i></i>").join("")}</span><button class="rls-nx" aria-label="הבא"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
  <span class="nx-note">הדמיה · הסרטונים, הפנים והמשפטים האמיתיים יגיעו מתדהר</span><a class="cta nx-cta">${C.cta}</a></section>`;
