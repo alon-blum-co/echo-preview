@@ -3526,6 +3526,36 @@ body{padding:0!important;margin:0;background:#FFFFFF}
   .pn-it.i2{top:22%!important}.pn-it.i3{bottom:20%!important}
   .pn-msgs{min-height:min(52cqw,210px)!important}
 }
+/* 30 days, light and with a living calendar (contrast after the night section) */
+.tr{background:radial-gradient(40% 60% at 85% 20%,#D6E7FF,transparent 70%),radial-gradient(35% 50% at 10% 90%,#E3EEFF,transparent 70%),linear-gradient(180deg,#F4F8FF,#FFFFFF);color:#0B1F4D}
+.tr .rings path{stroke:#3D8BFF}
+.tr-in{align-items:center}
+.tr-big{padding:2.2cqw 2.4cqw 2cqw;border-radius:2.4cqw;background:linear-gradient(160deg,#163C88,#0B1F4D 60%,#081633);box-shadow:0 3cqw 6cqw -3cqw #0B1F4Dcc,0 0 0 1px #FFFFFF14 inset;transform:rotate(-2deg)}
+.tr-big>b{font-size:12cqw;color:transparent;-webkit-text-fill-color:transparent;background:linear-gradient(170deg,#FFFFFF,#8ED3FF 60%,#3D8BFF);-webkit-background-clip:text;background-clip:text;text-shadow:none;line-height:.85}
+.tr-big>span{font-size:max(1.2cqw,15px);font-weight:700;color:#C9D8F5;margin-top:.6cqw}
+.tr-cal{margin-top:1.4cqw;width:22cqw}
+.tr-ch,.tr-days{display:grid;grid-template-columns:repeat(7,1fr);gap:.35cqw}
+.tr-ch i{font-style:normal;text-align:center;font-size:max(.8cqw,11px);font-weight:700;color:#8ED3FF;padding-bottom:.3cqw}
+.tr-days i{font-style:normal;display:grid;place-items:center;aspect-ratio:1;border-radius:.6cqw;font-size:max(.85cqw,11.5px);font-weight:700;color:#C9D8F5;background:#FFFFFF12;box-shadow:0 0 0 1px #FFFFFF14 inset;animation:trd 4.2s var(--d) ease-in-out infinite}
+@keyframes trd{0%,8%{background:#FFFFFF12;color:#C9D8F5}14%,70%{background:linear-gradient(150deg,#3D8BFF,#1A5CFF);color:#fff}82%,100%{background:#FFFFFF12;color:#C9D8F5}}
+.tr-days i:last-child{box-shadow:0 0 0 1.5px #8ED3FF inset}
+.tr-cap{display:block;margin-top:1cqw;font-size:max(.95cqw,13px);color:#EAF4FF}.tr-cap b{color:#fff}
+.tr .nx-h,.tr .nx-h .th2{color:#0B1F4D}
+.tr .nx-h .gr{background:linear-gradient(100deg,#0B1F4D,#1A5CFF 60%,#3D8BFF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tr-ck li{color:#1C2D57}.tr-ck li b{color:#0B1F4D}
+.tr-ck li i{background:linear-gradient(150deg,#3D8BFF,#1A5CFF);box-shadow:0 .8cqw 1.6cqw -.8cqw #1A5CFF}
+.tr-ck li i::after{border-color:#FFFFFF}
+.tr-ck li{padding:1cqw 1.2cqw;border-radius:1.4cqw;background:#FFFFFF;box-shadow:0 0 0 1px #1A5CFF1a,0 1.4cqw 2.6cqw -2cqw #0B1F4D59}
+.tr-end{border-top-color:#1A5CFF26}.tr-end p{color:#1C2D57}.tr-end b{color:#0B1F4D}
+.tr-end .cta{background:linear-gradient(100deg,#1A5CFF 0%,#3D8BFF 30%,#8ED3FF 50%,#3D8BFF 70%,#1A5CFF 100%)!important;background-size:220% 100%!important;color:#fff!important;animation:flow 5s ease-in-out infinite!important;box-shadow:0 1.2cqw 3cqw -1cqw #1A5CFF99!important}
+@container pg (max-width:860px){
+  .tr-big{padding:min(6cqw,24px);border-radius:min(6cqw,24px)}
+  .tr-big>b{font-size:min(34cqw,136px)}.tr-big>span{font-size:min(3.8cqw,15px)}
+  .tr-cal{width:min(64cqw,256px);margin-top:min(4cqw,16px)}
+  .tr-ch,.tr-days{gap:min(1.2cqw,5px)}.tr-ch i{font-size:min(2.8cqw,11px)}.tr-days i{border-radius:min(2cqw,8px);font-size:min(3cqw,12px)}
+  .tr-cap{font-size:min(3.2cqw,12.5px);margin-top:min(3cqw,12px)}
+  .tr-ck li{padding:min(3cqw,12px) min(3.4cqw,14px);border-radius:min(4cqw,16px)}
+}
 .pl-c{transform-origin:50% 0}
 @container pg (max-width:860px){.pl-deck{height:min(96cqw,380px)}}
 </style>
@@ -4112,7 +4142,7 @@ const WHR6=k=>`<section class="wh" id="wh-${k}">${RINGS("left:6%;top:70%;width:4
   <div class="wh-arrow"><i></i><span>ממשיך איתך ל...</span></div>
   <div class="wh-tool"><div class="wh-dest">${DEST.map((d,i)=>`<button class="wh-d${i?'':' on'}" data-i="${i}"><span class="wh-ic" style="background:${(APPS.find(a=>a[0]===d[0])||[0,0,"#0B1F4D"])[2]}"><img src="img/ic-${d[0]}.svg" alt=""></span>${d[1]}</button>`).join("")}</div>
    <div class="wh-out">${WOUT.map((w,i)=>`<div class="wh-o${i?'':' on'}" data-i="${i}">${w}</div>`).join("")}</div></div></div></section>`;
-const TRY6=k=>`<section class="tr" id="tr-${k}">${RINGS("left:92%;top:40%;width:44cqw;height:44cqw")}<div class="tr-in"><div class="tr-big"><b>30</b><span>יום ניסיון ב-Echo</span></div>
+const TRY6=k=>`<section class="tr" id="tr-${k}">${RINGS("left:92%;top:40%;width:44cqw;height:44cqw")}<div class="tr-in"><div class="tr-big"><b>30</b><span>יום ניסיון ב-Echo, ללא עלות</span><div class="tr-cal"><span class="tr-ch">${["א","ב","ג","ד","ה","ו","ש"].map(d=>`<i>${d}</i>`).join("")}</span><span class="tr-days">${Array.from({length:30},(_,i)=>`<i style="--d:${(i*0.11).toFixed(2)}s">${i+1}</i>`).join("")}</span><span class="tr-cap"><b>יום 30</b> נשלח לך סיכום, ואתה מחליט</span></div></div>
  <div class="tr-c"><h2 class="nx-h"><span class="th2">קח 30 יום לראות איך Echo</span> <span class="gr">משתלב ביום העבודה שלך.</span></h2>
   <ul class="tr-ck"><li><i></i><span><b>30 יום ללא עלות:</b> תוכל להשתמש ב-Echo בשיחות האמיתיות שלך ולבדוק איך הוא עוזר לך בניהול השיחות והמשימות.</span></li>
    <li><i></i><span><b>בלי כרטיס אשראי ובלי התחייבות:</b> לא צריך להזין פרטי תשלום כדי להתחיל את הניסיון.</span></li>
