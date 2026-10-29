@@ -1761,6 +1761,47 @@ body{padding:0!important;margin:0;background:#FFFFFF}
 .form2 .strip form>*,.form2 .strip .fields>*{min-width:0}
 .form2 .strip .fld input,.form2 .strip .go{width:100%;max-width:100%}
 @container pg (max-width:860px){.form2 .strip .go{padding:0 min(3cqw,12px);font-size:min(4.2cqw,17px);white-space:nowrap}}
+/* 07: the second form, a night version of the strip */
+.form2.alt .strip{background:radial-gradient(50% 80% at 100% 0%,#1A5CFF80,transparent 70%),radial-gradient(40% 70% at 0% 100%,#3D8BFF4d,transparent 70%),linear-gradient(160deg,#163C88,#0B1F4D 60%,#081633)!important}
+.form2.alt .strip .clip{display:none}
+.form2.alt .strip .go{background:linear-gradient(100deg,#1A5CFF 0%,#3D8BFF 30%,#8ED3FF 50%,#3D8BFF 70%,#1A5CFF 100%);background-size:220% 100%;box-shadow:0 1.4cqw 2.6cqw -1.2cqw #1A5CFFcc}
+.form2.alt .strip .go::after{background-color:#0B1F4D}
+.form2.alt .strip .sub2{color:#C9D8F5}
+
+/* hero: no outline object */
+.hero2 .eyb::before{display:none!important;animation:none!important}
+/* 02 customer stories: written stories with the logo and the name */
+.stx{position:relative;padding:5.4cqw 0 4.4cqw;text-align:center;background:linear-gradient(180deg,#FFFFFF,#F2F7FF 50%,#FFFFFF)}
+.stx .h2{padding:0 var(--g)}
+.stx .lane{margin-top:3cqw;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.stx .trk{display:flex;gap:1.6cqw;width:max-content;padding:1cqw 0 2.4cqw;animation:stxm 60s linear infinite}
+.stx .lane:hover .trk{animation-play-state:paused}
+@keyframes stxm{to{transform:translateX(50%)}}
+.stx .sk{flex:none;width:26cqw;text-align:right;background:#FFFFFF;border-radius:1.8cqw;padding:1.8cqw 1.9cqw 1.7cqw;box-shadow:0 0 0 1px #1A5CFF24,0 1.8cqw 3.4cqw -2.2cqw #0B1F4D59;display:flex;flex-direction:column;gap:1.1cqw}
+.stx .who{display:flex;align-items:center;gap:1cqw}
+.stx .lgo{flex:none;width:4cqw;height:4cqw;border-radius:1.1cqw;display:grid;place-items:center;font-size:1.9cqw;font-weight:900;color:#fff;box-shadow:0 .6cqw 1.2cqw -.6cqw #0B1F4D80}
+.stx .lgo.g0{background:linear-gradient(150deg,#3D8BFF,#1A5CFF)}.stx .lgo.g1{background:linear-gradient(150deg,#163C88,#0B1F4D)}.stx .lgo.g2{background:linear-gradient(150deg,#8ED3FF,#3D8BFF)}
+.stx .who b{display:block;font-size:max(1.45cqw,17px);font-weight:900;color:#0B1F4D}
+.stx .who small{display:block;margin-top:.15cqw;font-size:max(1.02cqw,14px);color:#4A5F8C}
+.stx .fq{display:flex;flex-direction:column;gap:.25cqw;padding-top:1cqw;border-top:1px solid #1A5CFF1f}
+.stx .fq i{font-style:normal;font-size:max(.92cqw,13px);font-weight:700;color:#1A5CFF}
+.stx .fq span{font-size:max(1.08cqw,15px);line-height:1.55;color:#1C2D57}
+.stx .res{align-self:flex-start;font-size:max(.95cqw,13.5px);font-weight:700;color:#0B1F4D;background:#EAF4FF;border-radius:99px;padding:.35cqw 1cqw}
+.stx .nx-note{margin-top:.6cqw}
+@container pg (max-width:860px){
+  .stx{padding:min(14cqw,56px) 0 min(10cqw,40px)}
+  .stx .lane{margin-top:min(6cqw,24px);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-mask:none;mask:none;scrollbar-width:none}
+  .stx .lane::-webkit-scrollbar{display:none}
+  .stx .trk{animation:none;gap:min(3.4cqw,14px);padding:min(2cqw,8px) var(--g) min(5cqw,20px)}
+  .stx .sk{width:min(78cqw,320px);scroll-snap-align:center;border-radius:min(5cqw,20px);padding:min(5cqw,20px);gap:min(3.4cqw,14px)}
+  .stx .sk.dup{display:none}
+  .stx .who{gap:min(3cqw,12px)}
+  .stx .lgo{width:min(13cqw,52px);height:min(13cqw,52px);border-radius:min(3.6cqw,14px);font-size:min(6cqw,24px)}
+  .stx .who b{font-size:min(4.8cqw,19px)}.stx .who small{font-size:min(3.6cqw,14.5px)}
+  .stx .fq{gap:min(1cqw,4px);padding-top:min(3cqw,12px)}
+  .stx .fq i{font-size:min(3.4cqw,13.5px)}.stx .fq span{font-size:min(4cqw,16px)}
+  .stx .res{font-size:min(3.4cqw,13.5px);padding:min(1.2cqw,5px) min(3cqw,12px)}
+}
 </style>
 <div class="page rC livepage" data-phase="rec" id="pd"></div>
 <div class="hidden-board"><div id="pm"></div><div id="pt"></div><ol id="map"></ol><div id="blogo"></div><textarea id="fbn"></textarea><button id="fbs"></button><span id="fbst"></span></div>
@@ -2013,7 +2054,7 @@ const VIDEO2=k=>`<section class="vid2" id="video-${k}"><h2 class="vtitle"><span 
  <div class="vside"><div class="moments"><span class="thread"><i></i></span>${[0,1,2].map(i=>`<div class="mo"><span class="node"></span><div class="mt"><h3>${C.b[i][0]}</h3><p>${C.b[i][1]}</p>${REAL[i]}</div></div>`).join("")}</div><span class="cta">${C.cta}</span></div></div></section>`;
 const HOW2=k=>`<section class="how howB how2" data-cs="s2"><h2 class="h2"><span class="th">אתה ממשיך לדבר עם הלקוחות שלך,</span><br>Echo&nbsp;דואג לעשות סדר</h2>
  <div class="stageB"><span class="prect"></span><span class="peek">${ch("s-look s-blink")}</span><div class="ph"><img src="img/r-iphone-cut.webp" alt="אייפון עם שיחה וסיכום של Echo">${SCREEN}</div>${STEPS}</div></section>`;
-const FORM2=k=>`<section class="form2" id="form-${k}"><div class="strip"><div class="clip"></div><div class="perch">${ch("s-look s-blink")}</div>
+const FORM2=k=>`<section class="form2 alt" id="form-${k}"><div class="strip"><div class="clip"></div><div class="perch">${ch("s-look s-blink")}</div>
  <div class="top"><div><h2 class="h2">בוא נחבר את Echo לשיחות שלך,<span class="bl">עם 30 יום ניסיון ללא עלות.</span></h2><p class="sub2">${C.fs}</p></div></div>
  <form class="sform" novalidate>${FIELDS(k)}<button class="go" type="submit">${C.cta}</button><div class="done"><h3>קיבלנו, תודה!</h3><p>נחזור אליך בקרוב לתיאום פגישת ההטמעה.</p></div></form>
  <div class="trust"><span>בלי כרטיס אשראי</span><span>בלי התחייבות</span><span>פגישת הטמעה קצרה</span></div></div></section>`;
@@ -2073,7 +2114,14 @@ const SCON=[["A","כרטיס סיפור לכל לקוח","כל לקוח מקבל
 
 const MISS=(t,d)=>`<section class="miss"><b>${t}</b><span>${d}</span></section>`;
 const SBAR=`<div class="sbar2" aria-hidden="true"><div class="in2"><span class="lg2">${ch("s-look s-blink")}<b>Echo</b><small>העוזר הטלפוני שלך</small></span><span class="lk2"><span>איך זה עובד</span><span>לקוחות מספרים</span><span>שאלות</span></span><span class="cta">${C.cta}</span></div></div>`;
-const PAGE=k=>SBAR+HERO2(k)+VIDEO2(k)+STORIES(k)+FORM2(k);
+/* 02 customer stories: a written story per customer, logo and name on top; the fields come from doc 06 */
+const SKF=[["לפני Echo","איך תיעד שיחות, זכר משימות ועקב אחרי מה שסיכם עם לקוחות"],["היום, עם Echo","מה הוא עושה עם הסיכומים ובאילו יכולות הוא משתמש בפועל"],["מה השתנה","מה הוא כבר לא צריך לעשות בעצמו, ודוגמה אחת אמיתית"]];
+const SKC=(p,i,dup)=>`<article class="sk${dup?' dup':''}"><div class="who"><span class="lgo g${i%3}">${p[2]}</span><span><b>${p[0]}</b><small>${p[1]}</small></span></div>
+ ${SKF.map(f=>`<div class="fq"><i>${f[0]}</i><span>${f[1]}</span></div>`).join("")}<span class="res">תוצאה מספרית, אם קיימת</span></article>`;
+const STX=k=>`<section class="stx" id="stories-${k}">${STT}<div class="lane"><div class="trk">${PPL.map((p,i)=>SKC(p,i)).join("")}${PPL.map((p,i)=>SKC(p,i,1)).join("")}</div></div>
+ <span class="nx-note">הדמיה · הלוגו, השם והסיפור של כל לקוח יגיעו מתדהר</span></section>`;
+
+const PAGE=k=>SBAR+HERO2(k)+VIDEO2(k)+STX(k)+FORM2(k);
 
 /* the board */
 const MAP=[["01","הירו","done","הכותרת, הכפתור, הלוגו מונפש עם פס הכלים, שני כרטיסים אמיתיים מהאפליקציה"],
