@@ -2663,6 +2663,47 @@ body{padding:0!important;margin:0;background:#FFFFFF}
   .wf-box{margin-top:min(12cqw,48px);border:0;background:none;box-shadow:none}
   .wf-perch{left:min(5cqw,20px);top:min(-10cqw,-40px);width:min(18cqw,72px)}
 }
+/* ===== play: hero textures in the white sections, bubble shapes, objects that break their frames ===== */
+.plx .rings path,.tst .rings path,.wf .rings path{stroke:#3D8BFF;stroke-width:1.3}
+.tst,.wf{position:relative;overflow:clip}
+.tst::before,.wf::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#1A5CFF0f 1px,transparent 1px),linear-gradient(90deg,#1A5CFF0f 1px,transparent 1px);background-size:4.4cqw 4.4cqw;-webkit-mask:radial-gradient(55% 45% at 50% 30%,#000,transparent 80%);mask:radial-gradient(55% 45% at 50% 30%,#000,transparent 80%)}
+.tst>*:not(.rings),.wf>*:not(.rings){position:relative;z-index:1}
+.tst{background:radial-gradient(30% 40% at 4% 18%,#8ED3FF4d,transparent 70%),radial-gradient(30% 40% at 96% 70%,#3D8BFF2e,transparent 70%),linear-gradient(180deg,#EAF4FF,#F7FBFF 60%,#FFFFFF)}
+/* stories: the front card is a speech bubble, the list has no boxes */
+.pl-c[data-p="0"]{border-radius:2.4cqw 2.4cqw 2.4cqw .5cqw}
+.pl-c[data-p="0"]::after{content:"";position:absolute;left:0;bottom:-1.6cqw;width:3cqw;height:1.8cqw;background:#1846D8;clip-path:polygon(0 0,100% 0,0 100%)}
+.pl-c[data-p="1"]{transform:translateY(-2.6cqw) translateX(1.2cqw) scale(.94) rotate(-2.4deg)}
+.pl-c[data-p="2"]{transform:translateY(-4.8cqw) translateX(-1.4cqw) scale(.88) rotate(2.6deg)}
+.pl-li,.pl-li.on{background:none;box-shadow:none}
+.pl-li{padding:.8cqw .6cqw}
+.pl-li.on b{font-size:max(1.45cqw,17px);background:linear-gradient(100deg,#0B1F4D,#1A5CFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.pl-li.on .pl-dot{background:linear-gradient(150deg,#3D8BFF,#1A5CFF);border:0;box-shadow:0 0 0 .5cqw #1A5CFF26;animation:pldot 1.8s ease-in-out infinite}
+@keyframes pldot{50%{box-shadow:0 0 0 1cqw #1A5CFF14}}
+.pl-li em{left:.6cqw;right:4.6cqw;bottom:.2cqw}
+/* video testimonials: the window is a speech bubble and the videos break out of its top */
+.tst .win{overflow:visible;margin-top:8.6cqw;padding-top:0;border-radius:2.6cqw 2.6cqw 2.6cqw .6cqw}
+.tst .win::after{content:"";position:absolute;left:0;bottom:-2cqw;width:3.6cqw;height:2.2cqw;background:#081633;clip-path:polygon(0 0,100% 0,0 100%)}
+.tst .rail{margin-top:-6.4cqw}
+.tst .tv{box-shadow:0 0 0 1px #ffffff26,0 3cqw 5cqw -2.4cqw #0B1F4Dcc}
+/* FAQ: shapes that talk to each other */
+.wf-qs{border-radius:2cqw .5cqw 2cqw 2cqw}
+.wf-win{border-radius:.5cqw 1.8cqw 1.8cqw 1.8cqw}
+@container pg (max-width:860px){
+  .pl-c[data-p="0"]{border-radius:min(5.4cqw,22px) min(5.4cqw,22px) min(5.4cqw,22px) min(1.4cqw,6px)}
+  .pl-c[data-p="0"]::after{bottom:min(-4cqw,-16px);width:min(8cqw,32px);height:min(4.4cqw,18px)}
+  .pl-c[data-p="1"]{transform:translateY(min(-4.6cqw,-18px)) translateX(min(2.4cqw,10px)) scale(.94) rotate(-2.4deg)}
+  .pl-c[data-p="2"]{transform:translateY(min(-8.6cqw,-34px)) translateX(max(-2.4cqw,-10px)) scale(.88) rotate(2.6deg)}
+  .tst .win{margin-top:min(26cqw,104px);border-radius:min(6cqw,24px) min(6cqw,24px) min(6cqw,24px) min(1.6cqw,6px)}
+  .tst .win::after{bottom:min(-5cqw,-20px);width:min(9cqw,36px);height:min(5cqw,20px)}
+  .tst .rail{margin-top:min(-22cqw,-88px)}
+  .wf-qs{border-radius:min(6cqw,24px) min(1.6cqw,6px) min(6cqw,24px) min(6cqw,24px)}
+}
+.plx>.rings{position:absolute}
+.tst .win{margin-top:13cqw}
+.tst .rail{margin-top:-11.4cqw}
+@container pg (max-width:860px){.tst .win{margin-top:min(30cqw,120px)}.tst .rail{margin-top:min(-26cqw,-104px)}}
+.wf-box{backdrop-filter:none!important}
+.tst .win{display:flow-root}
 .pl-c{transform-origin:50% 0}
 @container pg (max-width:860px){.pl-deck{height:min(96cqw,380px)}}
 </style>
@@ -2989,7 +3030,7 @@ const STX=k=>`<section class="stx" id="stories-${k}">${STT}<div class="lane"><di
 /* ===== sections 5-8, copy from doc 06 ===== */
 const WV=(n,seed,p)=>Array.from({length:n},(_,i)=>`<i class="${i<p?'p':''}" style="--h:${Math.round(30+60*Math.abs(Math.sin(i*1.7+seed)))}"></i>`).join("");
 const DUR=["0:48","1:12","0:56","1:05","0:39","1:21"];
-const TESTI=k=>`<section class="nx-sec tst" id="tst-${k}"><h2 class="nx-h"><span class="th2">עסקים שמשתמשים ב-Echo</span> <span class="gr">מספרים</span></h2>
+const TESTI=k=>`<section class="nx-sec tst" id="tst-${k}">${RINGS("left:6%;top:24%;width:44cqw;height:44cqw")}${RINGS("left:96%;top:80%;width:40cqw;height:40cqw")}<h2 class="nx-h"><span class="th2">עסקים שמשתמשים ב-Echo</span> <span class="gr">מספרים</span></h2>
  <div class="win"><div class="rail">${PPL.map((p,i)=>`<article class="tv zg${i%3}" data-i="${i}"><span class="bg"></span><span class="ini">${p[2]}</span><span class="zpl"></span>
   <div class="zcap"><b>${p[0]}</b><small>${p[1]}</small><span class="zwv">${WV(22,i,7)}<em>${DUR[i]}</em></span></div></article>`).join("")}</div>
  <div class="nav3"><button class="nx" aria-label="הבא">‹</button><span class="dots">${PPL.map(()=>"<i></i>").join("")}</span><button class="pv" aria-label="הקודם">›</button></div></div>
@@ -3137,7 +3178,7 @@ const PQ=[["אביב","משרד שיווק","א",0,"הייתי מסכם שיחו
  ["בר","מאמן כושר","ב",0,"שיחות ההיכרות עם מתאמנים חדשים היו רק בזיכרון. היום <mark>אני מגיע לאימון הראשון כשאני כבר מכיר את המתאמן,</mark> כולל הפציעה שהוא הזכיר בשיחה.","12 שיחות היכרות בשבוע","11:30"],
  ["אורי","סוכן ביטוח","א",1,"עקבתי אחרי פוליסות ומועדים באקסל, ידנית. עכשיו המשימות מהשיחות נכנסות ל-CRM, ו<mark>אף מועד חידוש לא מתפספס לי יותר.</mark>","כל החידושים טופלו בזמן","05:04"],
  ["מיכאל מרגוליס","נדל\"ן","מ",2,"עשרות שיחות ביום, ולא היה לי זמן לסדר אחרי אף אחת. היום <mark>כל בוקר מתחיל עם רשימת משימות מוכנה מאתמול.</mark>","30+ שיחות ביום מתועדות","03:55"]];
-const PL=k=>`<section class="plx" id="pl-${k}"><div class="pl-top"><h2 class="nx-h"><span class="gr">איך השימוש ב-Echo</span><span class="th3">שינה את הדרך שבה הלקוחות שלנו<br>מנהלים את השיחות שלהם?</span></h2></div>
+const PL=k=>`<section class="plx" id="pl-${k}">${RINGS("left:90%;top:36%;width:52cqw;height:52cqw")}<div class="pl-top"><h2 class="nx-h"><span class="gr">איך השימוש ב-Echo</span><span class="th3">שינה את הדרך שבה הלקוחות שלנו<br>מנהלים את השיחות שלהם?</span></h2></div>
  <div class="pl-g"><div class="pl-list">${PQ.map((q,i)=>`<button class="pl-li${i?'':' on'}" data-i="${i}"><span class="pl-dot"></span><span><b>${q[0]}</b><small>${q[1]}</small></span><em><i></i></em></button>`).join("")}</div>
   <div class="pl-deck-w"><div class="pl-deck">${PQ.map((q,i)=>`<article class="pl-c" data-i="${i}"><div class="pl-who"><span class="pl-ph" aria-label="מקום ללוגו"></span><span><b>${q[0]}</b><small>${q[1]}</small></span><span class="pl-n">${String(i+1).padStart(2,"0")}/${String(PQ.length).padStart(2,"0")}</span></div>
    <p class="pl-q">"${q[4]}"</p><div class="pl-ft"><span class="pl-ec">${ch("s-look s-blink")}<span class="pl-wv">${Array.from({length:16},(_,j)=>`<i style="--h:${30+Math.round(60*Math.abs(Math.sin(j*1.5+i)))}"></i>`).join("")}</span><em>${q[6]}</em></span><span class="pl-r">${q[5]}</span></div></article>`).join("")}</div>
@@ -3145,7 +3186,7 @@ const PL=k=>`<section class="plx" id="pl-${k}"><div class="pl-top"><h2 class="nx
  <span class="nx-note">דוגמה בלבד · הסיפורים, הלוגואים והשמות האמיתיים יגיעו מתדהר</span></section>`;
 
 /* FAQ after Wispr Flow: questions in a night panel, Echo answers in a live chat beside it */
-const WF=k=>`<section class="nx-sec wf" id="wf-${k}"><h2 class="nx-h wf-h"><span class="th2">כל מה שחשוב לדעת</span> <span class="gr">לפני שמתחילים לעבוד עם Echo</span></h2>
+const WF=k=>`<section class="nx-sec wf" id="wf-${k}">${RINGS("left:8%;top:62%;width:56cqw;height:56cqw")}<h2 class="nx-h wf-h"><span class="th2">כל מה שחשוב לדעת</span> <span class="gr">לפני שמתחילים לעבוד עם Echo</span></h2>
  <div class="wf-box"><span class="wf-perch">${ch("s-look s-blink")}</span><div class="wf-qs"><span class="wf-lb">שאלות</span><div class="wf-list"><span class="wf-hl"></span>${QA.map((q,i)=>`<div class="wf-it"><button class="wf-q" data-i="${i}" aria-expanded="false"><span>${q[0]}</span><i></i></button><div class="wf-ma"><div><div class="wf-dots"><i></i><i></i><i></i></div><p></p></div></div></div>`).join("")}</div></div>
   <div class="wf-an"><div class="wf-win"><div class="wf-top"><span class="wf-av">${ch("s-look s-blink")}</span><span><b>Echo</b><small><i></i>עונה על כל שאלה</small></span></div>
    <div class="wf-chat"><span class="wf-asked"></span><div class="wf-typing"><i></i><i></i><i></i></div><div class="wf-bub"><p></p></div></div>
