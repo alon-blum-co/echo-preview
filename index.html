@@ -2602,6 +2602,69 @@ body{padding:0!important;margin:0;background:#FFFFFF}
 }
 .pl-c{transform-origin:50% 0}
 @container pg (max-width:860px){.pl-deck{height:min(96cqw,380px)}}
+/* ===== round: colored story cards on white, richer navigation, form fixes, titles, FAQ box ===== */
+.plx{background:radial-gradient(40% 60% at 100% 0%,#EAF4FF,transparent 70%),radial-gradient(35% 55% at 0% 100%,#EAF4FF,transparent 70%),#FFFFFF;color:#0B1F4D}
+.plx::before{background-image:linear-gradient(#1A5CFF0d 1px,transparent 1px),linear-gradient(90deg,#1A5CFF0d 1px,transparent 1px);background-size:4.4cqw 4.4cqw;-webkit-mask:radial-gradient(60% 60% at 50% 30%,#000,transparent 80%);mask:radial-gradient(60% 60% at 50% 30%,#000,transparent 80%)}
+.plx .nx-h{font-size:3.3cqw;line-height:1.12;color:#0B1F4D}
+.plx .nx-h .gr{display:block;background:linear-gradient(100deg,#0B1F4D 0%,#1A5CFF 55%,#3D8BFF 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.plx .nx-h .th3{display:block;font-weight:200;color:#0B1F4D}
+.pl-li b{color:#4A5F8C}.pl-li small{color:#647AA8}.pl-li:hover b{color:#0B1F4D}
+.pl-li.on{background:#FFFFFF;box-shadow:0 0 0 1.5px #1A5CFF,0 1.4cqw 3cqw -1.8cqw #1A5CFF99}
+.pl-li.on b{color:#0B1F4D}.pl-li.on small{color:#4A5F8C}
+.pl-dot{background:#F4F8FF;border-color:#1A5CFF59}.pl-li.on .pl-dot{border-color:#1A5CFF}
+.pl-c{color:#fff;background:radial-gradient(70% 60% at 100% 0%,#8ED3FF80,transparent 70%),linear-gradient(150deg,#3D8BFF,#1A5CFF 55%,#1240C9);box-shadow:0 0 0 1px #FFFFFF33 inset,0 3cqw 5cqw -2.6cqw #1A5CFFcc}
+.pl-c::before{content:"";position:absolute;inset:0;border-radius:inherit;background-image:radial-gradient(#ffffff22 1px,transparent 1.2px);background-size:1.4cqw 1.4cqw;-webkit-mask:linear-gradient(200deg,#000,transparent 55%);mask:linear-gradient(200deg,#000,transparent 55%);pointer-events:none}
+.pl-c>*{position:relative}
+.pl-c[data-p="1"]{background:linear-gradient(150deg,#163C88,#0B1F4D)}
+.pl-c[data-p="2"]{background:linear-gradient(150deg,#8ED3FF,#3D8BFF)}
+.pl-c[data-p="1"],.pl-c[data-p="2"]{opacity:.9}
+.pl-who b{color:#FFFFFF}.pl-who small{color:#EAF4FF}
+.pl-n{color:#EAF4FFcc}
+.pl-ph{background:#FFFFFF1f;border-color:#FFFFFF99}
+.pl-q{color:#FFFFFF}
+.pl-q mark{background:linear-gradient(transparent 60%,#FFFFFF40 60%);color:#FFFFFF;font-weight:900;background-repeat:no-repeat;background-position:100% 0}
+.pl-ft{border-top-color:#FFFFFF33}
+.pl-wv i{background:#FFFFFF}
+.pl-ec em{color:#EAF4FF}
+.pl-r{color:#1A5CFF;background:#FFFFFF}
+.pl-ctl{gap:1.4cqw;margin-top:2.2cqw}
+.pl-ctl button{width:3.8cqw;height:3.8cqw;padding:0;border-radius:50%;color:#FFFFFF;background:linear-gradient(150deg,#3D8BFF,#1A5CFF);box-shadow:0 1cqw 2cqw -1cqw #1A5CFF,0 0 0 4px #EAF4FF;transition:transform .25s,box-shadow .25s}
+.pl-ctl button svg{width:45%;height:45%}
+.pl-ctl button:hover{transform:scale(1.08);background:linear-gradient(150deg,#3D8BFF,#1A5CFF);color:#fff;box-shadow:0 1.4cqw 2.6cqw -1cqw #1A5CFF,0 0 0 6px #D6E7FF}
+.pl-cnt2{display:flex;align-items:baseline;gap:.3cqw;font-size:max(1cqw,13.5px);color:#647AA8;direction:ltr}
+.pl-cnt2 b{font-size:max(1.5cqw,18px);font-weight:900;color:#0B1F4D}
+.pl-dots{gap:.4cqw}
+.pl-dots i{position:relative;width:2.4cqw;height:.32cqw;border-radius:99px;background:#1A5CFF26;overflow:hidden}
+.pl-dots i.on{width:2.4cqw;background:#1A5CFF26}
+.pl-dots i b{position:absolute;inset:0;width:0;background:#1A5CFF;border-radius:inherit}
+.pl-dots i.done b{width:100%}
+.pl-dots i.on b{animation:plp 7s linear forwards}
+.plx .nx-note{color:#647AA8}
+/* form: white arrow, room for the checklist */
+.form2.alt .strip .go::after{background:#0B1F4D no-repeat center/60% url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15 5l-7 7 7 7' fill='none' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+@container pg (min-width:861px){.form2 .strip .trust{margin-top:2.6cqw}}
+/* titles: one size and weight contrast across the page */
+.tst .nx-h{font-size:3.3cqw}
+/* FAQ: tighter top, a box with a glowing edge and Echo on its corner */
+.wf.nx-sec{padding-top:4.4cqw}
+.wf-box{position:relative;margin-top:4.4cqw;border:1.5px solid transparent;background:linear-gradient(160deg,#FFFFFFd9,#F2F7FFcc) padding-box,linear-gradient(135deg,#8ED3FF,#1A5CFF 40%,#FFFFFF 60%,#3D8BFF) border-box;box-shadow:0 3cqw 7cqw -3.4cqw #1A5CFF80}
+.wf-box::before{content:"";position:absolute;inset:-6% -4% auto auto;width:30%;height:60%;background:radial-gradient(closest-side,#8ED3FF66,transparent);filter:blur(10px);z-index:-1}
+.wf-perch{position:absolute;left:3cqw;top:-4.4cqw;width:7cqw;z-index:3;filter:drop-shadow(0 1.2cqw 1.6cqw #1A5CFF66)}
+.wf-perch .ch{width:100%;display:block}
+@container pg (max-width:860px){
+  .plx .nx-h{font-size:min(8cqw,32px)}
+  .pl-ctl{gap:min(3.4cqw,14px)}
+  .pl-ctl button{width:min(12cqw,48px);height:min(12cqw,48px)}
+  .pl-cnt2{font-size:min(3.4cqw,13.5px)}.pl-cnt2 b{font-size:min(5cqw,20px)}
+  .pl-dots{display:none}
+  .form2 .strip .trust{margin-top:min(6cqw,24px)!important}
+  .tst .nx-h{font-size:min(8cqw,32px)}
+  .wf.nx-sec{padding-top:min(12cqw,48px)}
+  .wf-box{margin-top:min(12cqw,48px);border:0;background:none;box-shadow:none}
+  .wf-perch{left:min(5cqw,20px);top:min(-10cqw,-40px);width:min(18cqw,72px)}
+}
+.pl-c{transform-origin:50% 0}
+@container pg (max-width:860px){.pl-deck{height:min(96cqw,380px)}}
 </style>
 <div class="page rC livepage" data-phase="rec" id="pd"></div>
 <div class="hidden-board"><div id="pm"></div><div id="pt"></div><ol id="map"></ol><div id="blogo"></div><textarea id="fbn"></textarea><button id="fbs"></button><span id="fbst"></span></div>
@@ -2921,12 +2984,12 @@ const SKC=(p,i,dup)=>`<article class="sk${dup?' dup':''}"><div class="who"><span
 const STX=k=>`<section class="stx" id="stories-${k}">${STT}<div class="lane"><div class="trk">${PPL.map((p,i)=>SKC(p,i)).join("")}${PPL.map((p,i)=>SKC(p,i,1)).join("")}</div></div>
  <span class="nx-note">הדמיה · הלוגו, השם והסיפור של כל לקוח יגיעו מתדהר</span></section>`;
 
-/* ===== stories (Plaud), video testimonials, FAQ (Wispr Flow), and the missing sections in place ===== */
+/* ===== stories, video testimonials, second form, FAQ, and the missing sections in place ===== */
 
 /* ===== sections 5-8, copy from doc 06 ===== */
 const WV=(n,seed,p)=>Array.from({length:n},(_,i)=>`<i class="${i<p?'p':''}" style="--h:${Math.round(30+60*Math.abs(Math.sin(i*1.7+seed)))}"></i>`).join("");
 const DUR=["0:48","1:12","0:56","1:05","0:39","1:21"];
-const TESTI=k=>`<section class="nx-sec tst" id="tst-${k}"><h2 class="nx-h">עסקים שמשתמשים ב-<span class="gr">Echo</span> מספרים</h2>
+const TESTI=k=>`<section class="nx-sec tst" id="tst-${k}"><h2 class="nx-h"><span class="th2">עסקים שמשתמשים ב-Echo</span> <span class="gr">מספרים</span></h2>
  <div class="win"><div class="rail">${PPL.map((p,i)=>`<article class="tv zg${i%3}" data-i="${i}"><span class="bg"></span><span class="ini">${p[2]}</span><span class="zpl"></span>
   <div class="zcap"><b>${p[0]}</b><small>${p[1]}</small><span class="zwv">${WV(22,i,7)}<em>${DUR[i]}</em></span></div></article>`).join("")}</div>
  <div class="nav3"><button class="nx" aria-label="הבא">‹</button><span class="dots">${PPL.map(()=>"<i></i>").join("")}</span><button class="pv" aria-label="הקודם">›</button></div></div>
@@ -3074,16 +3137,16 @@ const PQ=[["אביב","משרד שיווק","א",0,"הייתי מסכם שיחו
  ["בר","מאמן כושר","ב",0,"שיחות ההיכרות עם מתאמנים חדשים היו רק בזיכרון. היום <mark>אני מגיע לאימון הראשון כשאני כבר מכיר את המתאמן,</mark> כולל הפציעה שהוא הזכיר בשיחה.","12 שיחות היכרות בשבוע","11:30"],
  ["אורי","סוכן ביטוח","א",1,"עקבתי אחרי פוליסות ומועדים באקסל, ידנית. עכשיו המשימות מהשיחות נכנסות ל-CRM, ו<mark>אף מועד חידוש לא מתפספס לי יותר.</mark>","כל החידושים טופלו בזמן","05:04"],
  ["מיכאל מרגוליס","נדל\"ן","מ",2,"עשרות שיחות ביום, ולא היה לי זמן לסדר אחרי אף אחת. היום <mark>כל בוקר מתחיל עם רשימת משימות מוכנה מאתמול.</mark>","30+ שיחות ביום מתועדות","03:55"]];
-const PL=k=>`<section class="plx" id="pl-${k}"><div class="pl-top"><h2 class="nx-h"><span class="gr">איך השימוש ב-Echo</span><span class="th">שינה את הדרך שבה הלקוחות שלנו<br>מנהלים את השיחות שלהם?</span></h2></div>
+const PL=k=>`<section class="plx" id="pl-${k}"><div class="pl-top"><h2 class="nx-h"><span class="gr">איך השימוש ב-Echo</span><span class="th3">שינה את הדרך שבה הלקוחות שלנו<br>מנהלים את השיחות שלהם?</span></h2></div>
  <div class="pl-g"><div class="pl-list">${PQ.map((q,i)=>`<button class="pl-li${i?'':' on'}" data-i="${i}"><span class="pl-dot"></span><span><b>${q[0]}</b><small>${q[1]}</small></span><em><i></i></em></button>`).join("")}</div>
   <div class="pl-deck-w"><div class="pl-deck">${PQ.map((q,i)=>`<article class="pl-c" data-i="${i}"><div class="pl-who"><span class="pl-ph" aria-label="מקום ללוגו"></span><span><b>${q[0]}</b><small>${q[1]}</small></span><span class="pl-n">${String(i+1).padStart(2,"0")}/${String(PQ.length).padStart(2,"0")}</span></div>
    <p class="pl-q">"${q[4]}"</p><div class="pl-ft"><span class="pl-ec">${ch("s-look s-blink")}<span class="pl-wv">${Array.from({length:16},(_,j)=>`<i style="--h:${30+Math.round(60*Math.abs(Math.sin(j*1.5+i)))}"></i>`).join("")}</span><em>${q[6]}</em></span><span class="pl-r">${q[5]}</span></div></article>`).join("")}</div>
-   <div class="pl-ctl"><button class="pl-pv" aria-label="הקודם">›</button><span class="pl-dots">${PQ.map(()=>"<i></i>").join("")}</span><button class="pl-nx" aria-label="הבא">‹</button></div></div></div>
+   <div class="pl-ctl"><button class="pl-pv" aria-label="הקודם"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="pl-cnt2"><b class="pl-cur">01</b><span>/ ${String(PQ.length).padStart(2,"0")}</span></span><span class="pl-dots">${PQ.map(()=>"<i><b></b></i>").join("")}</span><button class="pl-nx" aria-label="הבא"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div>
  <span class="nx-note">דוגמה בלבד · הסיפורים, הלוגואים והשמות האמיתיים יגיעו מתדהר</span></section>`;
 
 /* FAQ after Wispr Flow: questions in a night panel, Echo answers in a live chat beside it */
 const WF=k=>`<section class="nx-sec wf" id="wf-${k}"><h2 class="nx-h wf-h"><span class="th2">כל מה שחשוב לדעת</span> <span class="gr">לפני שמתחילים לעבוד עם Echo</span></h2>
- <div class="wf-box"><div class="wf-qs"><span class="wf-lb">שאלות</span><div class="wf-list"><span class="wf-hl"></span>${QA.map((q,i)=>`<div class="wf-it"><button class="wf-q" data-i="${i}" aria-expanded="false"><span>${q[0]}</span><i></i></button><div class="wf-ma"><div><div class="wf-dots"><i></i><i></i><i></i></div><p></p></div></div></div>`).join("")}</div></div>
+ <div class="wf-box"><span class="wf-perch">${ch("s-look s-blink")}</span><div class="wf-qs"><span class="wf-lb">שאלות</span><div class="wf-list"><span class="wf-hl"></span>${QA.map((q,i)=>`<div class="wf-it"><button class="wf-q" data-i="${i}" aria-expanded="false"><span>${q[0]}</span><i></i></button><div class="wf-ma"><div><div class="wf-dots"><i></i><i></i><i></i></div><p></p></div></div></div>`).join("")}</div></div>
   <div class="wf-an"><div class="wf-win"><div class="wf-top"><span class="wf-av">${ch("s-look s-blink")}</span><span><b>Echo</b><small><i></i>עונה על כל שאלה</small></span></div>
    <div class="wf-chat"><span class="wf-asked"></span><div class="wf-typing"><i></i><i></i><i></i></div><div class="wf-bub"><p></p></div></div>
    <div class="wf-comp"><span>שאל את Echo על השיחות שלך...</span><i></i></div></div><a class="cta">${C.cta}</a></div></div></section>`;
@@ -3094,7 +3157,7 @@ const PAGE=k=>SBAR+HERO2(k)+VIDEO2(k)+PL(k)+FORM2(k)
  +GAP("04","כאב ובעיות קיימות · חסר","מה קורה לבעל עסק כשכל העבודה עוברת בטלפון? הקופי מוכן במסמך 06, עם גרפיקה של משימות שמצטברות")
  +TESTI(k)
  +GAP("06","הפתרון ואיך זה עובד · חסר","אתה ממשיך לדבר עם הלקוחות שלך, Echo דואג לעשות סדר: שלושה שלבים, וגם אחרי שהשיחה נגמרה עם ארבע יכולות, Echo עובד איפה שאתה כבר עובד, ו-30 יום")
- +GAP("07","השארת פרטים שנייה · חסר","אותו טופס כמו למעלה, בגרסה משלו")
+ +FORM2(k+"2")
  +WF(k);
 
 /* the board */
@@ -3155,7 +3218,7 @@ else document.querySelectorAll(".how").forEach(h=>h.dataset.cs="s4");
 
 requestAnimationFrame(orbitTick);
 document.querySelectorAll(".plx").forEach(sec=>{const cs=[...sec.querySelectorAll(".pl-c")],ls=[...sec.querySelectorAll(".pl-li")],ds=[...sec.querySelectorAll(".pl-dots i")],n=cs.length;let a=0,t=null,busy=false;
- const place=()=>{cs.forEach((c,i)=>{const p=(i-a+n)%n;c.dataset.p=p<3?p:"x";});ls.forEach((l,i)=>{l.classList.remove("on");if(i===a){void l.offsetWidth;l.classList.add("on");}});ds.forEach((d,i)=>d.classList.toggle("on",i===a));};
+ const place=()=>{cs.forEach((c,i)=>{const p=(i-a+n)%n;c.dataset.p=p<3?p:"x";});ls.forEach((l,i)=>{l.classList.remove("on");if(i===a){void l.offsetWidth;l.classList.add("on");}});ds.forEach((d,i)=>{d.classList.remove("on");d.classList.toggle("done",i<a);if(i===a){void d.offsetWidth;d.classList.add("on");}});const cu=sec.querySelector(".pl-cur");if(cu)cu.textContent=String(a+1).padStart(2,"0");};
  const arm=()=>{clearTimeout(t);if(!reduce)t=setTimeout(()=>go(a+1,1),7000);};
  const go=(i,dir)=>{i=(i+n)%n;if(i===a||busy)return;busy=true;const old=cs[a];
   if(dir>0&&!reduce){old.classList.add("fly");setTimeout(()=>{old.classList.remove("fly");a=i;place();busy=false;},560);}
